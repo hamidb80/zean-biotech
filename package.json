@@ -1,0 +1,28 @@
+{
+  "name": "zeanbiotech",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "zean biotech official website",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon src/main.js",
+    "style": " lessc.cmd  ./styles/app.less  static/style.css",
+    "test": "test"
+  },
+  "keywords": [
+    "website",
+    "zean",
+    "biotech",
+    "zeanbiotech"
+  ],
+  "author": "hamidb80",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mustache": "^4.2.0"
+  },
+  "devDependencies": {
+    "less": "^4.1.1",
+    "nodemon": "^2.0.12"
+  }
+}
