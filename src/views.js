@@ -13,18 +13,39 @@ function loadView(...viewPath) {
 }
 
 const defaultPartials = [
-  'meta', 'footer', 'header',
+  'meta', 'footer', 'header', 'footer-part',
 ].reduce((res, vname) => setObj(res, vname,
   loadView("views", "components", vname + '.html')
 ), {})
 
 const defaultData = {
   navs: [
-    {name: 'صفحه اصلی', link: `${address}/`},
-    {name: 'محصوالات', link: `${address}/products/`},
-    {name: 'خدمات', link: `${address}/services/`},
-    {name: 'درباره ما', link: `${address}/aboutus/`},
-    {name: 'تماس با ما', link: `${address}/contactus/`},
+    { name: 'صفحه اصلی', link: `${address}/` },
+    { name: 'محصوالات', link: `${address}/products/` },
+    { name: 'خدمات', link: `${address}/services/` },
+    { name: 'درباره ما', link: `${address}/aboutus/` },
+    { name: 'تماس با ما', link: `${address}/contactus/` },
+  ],
+
+  footerParts: [
+    {
+      title: 'محصولات', items: [
+        { name: "کیت استخراج DNA از بزاق", link: `${address}/contactus/` },
+        { name: "کیت استخراج DNA از خون", link: `${address}/contactus/` },
+      ]
+    },
+    {
+      title: 'خدمات', items: [
+        { name: "کیت استخراج DNA از بزاق", link: `${address}/contactus/` },
+        { name: "کیت استخراج DNA از خون", link: `${address}/contactus/` },
+      ]
+    },
+    {
+      title: 'تماس با ما', items: [
+        { name: "کیت استخراج DNA از بزاق", link: `${address}/contactus/` },
+        { name: "کیت استخراج DNA از خون", link: `${address}/contactus/` },
+      ]
+    },
   ]
 }
 
