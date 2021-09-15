@@ -1,0 +1,141 @@
+@import url("./def.less");
+
+@triange-height: 100px;
+
+.stage {
+  overflow: hidden;
+
+  .inside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 400px;
+    padding: 0 32px;
+
+    .part {
+      align-self: stretch;
+    }
+
+    .image {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        .rounded();
+        border-width: 6px;
+        border-style: solid;
+        max-width: 100%;
+      }
+    }
+
+    .content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .title {
+        .fa();
+        font-size: 32px;
+        font-weight: bold;
+      }
+
+      .see-more {
+        .fa();
+        display: inline-block;
+        text-decoration: none;
+        border-radius: 22px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .triangle {
+    display: none;
+
+    &.top {
+      border-right: 100vh solid transparent !important;
+      border-bottom: @triange-height solid black;
+    }
+
+    &.bottom {
+      border-left: 100vh solid transparent !important;
+      border-bottom: @triange-height solid black;
+    }
+  }
+
+  &:nth-child(even) {
+    .inside {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &:first-child {
+    background-color: @ligthgray;
+
+    .triangle.bottom {
+      display: block;
+      border-color: white;
+    }
+
+    .title {
+      color: @dark;
+    }
+
+    img {
+      border-color: @dark;
+    }
+
+    .see-more {
+      background-color: @dark;
+      color: white;
+    }
+  }
+
+  & {
+    background-color: #fff;
+
+    .title {
+      color: @skyblue;
+    }
+
+    img {
+      border-color: @skyblue;
+    }
+
+    .see-more {
+      background-color: @skyblue;
+      color: white;
+    }
+  }
+
+  &:last-child {
+    background-color: @skyblue;
+
+
+    .triangle.top {
+      display: block;
+      background-color: white;
+      border-color: @skyblue;
+    }
+
+    .title {
+      color: white;
+    }
+
+    img {
+      border-color: white;
+    }
+
+    .see-more {
+      background-color: white;
+      color: @skyblue;
+    }
+  }
+}

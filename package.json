@@ -6,7 +6,7 @@
   "main": "main.js",
   "scripts": {
     "dev": "nodemon src/main.js",
-    "style": " lessc.cmd  ./styles/app.less  static/style.css",
+    "style": "less-watch-compiler.cmd  ./styles/  static/dist/ app.less",
     "test": "test"
   },
   "keywords": [
@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "mongodb": "^4.1.2",
     "mustache": "^4.2.0"
   },
   "devDependencies": {
