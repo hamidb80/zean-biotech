@@ -11,16 +11,23 @@ body {
 }
 
 .header {
+  position: relative;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  padding: 0 12px;
+  padding: 0 24px;
   background-color: white;
+  .shadow();
+
+  img{
+    max-height: 80%;
+  }
 
   h1 {
     .fa();
-    font-size: 16px;
+    font-size: 24px;
     color: @skyblue;
   }
 }

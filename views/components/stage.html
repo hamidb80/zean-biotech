@@ -2,13 +2,13 @@
   <div class="top triangle"></div>
   <div class="inside">
     <div class="part image">
-      <img src="{{pic_url}}" alt="{{pic_alt}}">
+      <img src="{{pic_url}}" alt="{{pic_alt}}" />
     </div>
     <div class="part content">
       <div class="title"> {{title}} </div>
       <div class="icons">
         {{#icons}}
-        <img class="icon" src="{{icon}}" alt="">
+        <img class="icon" src="{{.}}" alt="" />
         {{/icons}}
       </div>
       <a class="btn see-more" href="{{link}}">

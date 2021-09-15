@@ -19,9 +19,10 @@
     }
 
     .image {
+      width: 30%;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
 
       img {
@@ -33,6 +34,7 @@
     }
 
     .content {
+      width: 70%;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -43,6 +45,12 @@
         .fa();
         font-size: 32px;
         font-weight: bold;
+        text-align: center;
+        max-width: 80%;
+      }
+
+      .icon{
+        .square(58px);
       }
 
       .see-more {
@@ -60,12 +68,12 @@
     display: none;
 
     &.top {
-      border-right: 100vh solid transparent !important;
+      border-right: 100vw solid transparent !important;
       border-bottom: @triange-height solid black;
     }
 
     &.bottom {
-      border-left: 100vh solid transparent !important;
+      border-left: 100vw solid transparent !important;
       border-bottom: @triange-height solid black;
     }
   }

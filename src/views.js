@@ -33,10 +33,10 @@ const defaultData = {
 export const stagePartial =
   loadView("views", "components", 'stage.html')
 
-export function combinePartials(partialsNameMap) {
+export function combinePartials(partialsNameMap = {}) {
   return { ...defaultPartials, ...partialsNameMap }
 }
-export function combineData(data) {
+export function combineData(data = {}) {
   return { ...defaultData, ...data }
 }
 
