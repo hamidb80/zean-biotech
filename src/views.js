@@ -23,8 +23,8 @@ const defaultData = {
     { name: 'صفحه اصلی', link: `${address}/` },
     { name: 'محصوالات', link: `${address}/products/` },
     { name: 'خدمات', link: `${address}/services/` },
-    { name: 'درباره ما', link: `${address}/aboutus/` },
-    { name: 'تماس با ما', link: `${address}/contactus/` },
+    { name: 'درباره ما', link: `${address}/about-us/` },
+    { name: 'تماس با ما', link: `${address}/contact-us/` },
   ],
 
   footerParts: [

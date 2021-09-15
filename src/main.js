@@ -55,14 +55,14 @@ app.get('/services/', async (req, res) => {
     combinePartials()
   ))
 })
-app.get('/contactus/', async (req, res) => {
+app.get('/contact-us/', async (req, res) => {
   res.send(Mustache.render(
     homeTemp,
     combineData(),
     combinePartials()
   ))
 })
-app.get('/aboutus/', async (req, res) => {
+app.get('/about-us/', async (req, res) => {
   res.send(Mustache.render(
     homeTemp,
     combineData(),
