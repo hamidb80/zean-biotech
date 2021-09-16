@@ -2,6 +2,14 @@
 
 @triange-height: 100px;
 
+.box-shadow-image(@move, @direction, @size, @color) {
+  box-shadow: (if(@direction, -@move -@move 0 @size @color, @move @move 0 @size @color));
+}
+
+.shadow-ready(@dir, @color){
+  .box-shadow-image(0, @dir, 10px, @color);
+}
+
 .stage {
   overflow: hidden;
 
@@ -26,9 +34,6 @@
       align-items: center;
 
       img {
-        .rounded();
-        border-width: 6px;
-        border-style: solid;
         max-width: 100%;
       }
     }
@@ -59,7 +64,7 @@
         .transition();
         display: inline-block;
         text-decoration: none;
-        border-radius: 22px;
+        .very-rounded();
         font-weight: bold;
         font-size: 16px;
         border: 3px solid transparent;
@@ -85,6 +90,34 @@
     }
   }
 
+  &:first-child {
+    background-color: @ligthgray;
+
+    .triangle.bottom {
+      display: block;
+      border-color: white;
+    }
+
+    .title {
+      color: @darkblue;
+    }
+    .image{
+      img {
+        .shadow-ready(false, @darkblue);
+      }
+    }
+
+    .see-more {
+      background-color: @darkblue;
+      color: white;
+
+      &:hover {
+        color: @darkblue;
+        border-color: @darkblue;
+      }
+    }
+  }
+
   &:nth-child(2) {
     background-color: #fff;
 
@@ -96,8 +129,11 @@
       color: @skyblue;
     }
 
-    img {
-      border-color: @skyblue;
+    .image{
+      img {
+        border-color: @skyblue;
+        .shadow-ready(true, @skyblue);
+      }
     }
 
     .see-more {
@@ -110,33 +146,6 @@
       }
     }
 
-  }
-
-  &:first-child {
-    background-color: @ligthgray;
-
-    .triangle.bottom {
-      display: block;
-      border-color: white;
-    }
-
-    .title {
-      color: @darkblue;
-    }
-
-    img {
-      border-color: @darkblue;
-    }
-
-    .see-more {
-      background-color: @darkblue;
-      color: white;
-
-      &:hover {
-        color: @darkblue;
-        border-color: @darkblue;
-      }
-    }
   }
 
   &:last-child {
@@ -153,8 +162,11 @@
       color: white;
     }
 
-    img {
-      border-color: white;
+    .image{
+      img {
+        border-color: white;
+        .shadow-ready(false, white);
+      }
     }
 
     .see-more {

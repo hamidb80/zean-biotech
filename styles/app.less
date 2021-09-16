@@ -66,19 +66,20 @@ body {
     font-size: 18px;
     .transition();
 
-    &.ative, &:hover{
+    &.ative,
+    &:hover {
       background-color: @darkblue;
     }
   }
 
   @media screen and (max-width: @mobile) {
-    &{
+    & {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-evenly;
 
-      a{
+      a {
         width: 30%;
       }
     }
@@ -87,52 +88,74 @@ body {
 
 footer {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  padding: 0 30px;
-  min-height: 220px;
+  padding: 16px 30px;
   background-color: @darkblue;
   color: white;
   direction: rtl;
+  .fa();
 
-  .part {
-    width: 30%;
+  .part{
+    width: 100%;
+    border-bottom: 2px solid lighten(@darkblue, 6%);
+    padding: 8px 0;
 
-    .title {
+    .title{
       font-size: 20px;
-      border-bottom: 2px solid white;
-      padding: 4px 8px;
-      margin-bottom: 10px;
-      .fa();
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: white;
     }
 
-    ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+    .body{
+      margin-right: 8px;
+      color: lighten(@darkblue, 80%);
+    }
+  }
 
-      li {
+  .part:last-child{
+    border-bottom: none;
+  }
 
-        a,
+  .links {
+    display: flex;
+    justify-content: flex-start;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      text-decoration: none;
+      .rounded();
+      .transition();
+      
+      .icon {
+        display: inline-block;
+        background: url("/static/pics/left-triangle.svg");
+        .square(16px);
+        margin-left: 4px;
+      }
+      
+      .text {
+        .fa();
+        font-size: 16px;
+        color: white;
+      }
+
+      &:hover {
+        background-color: white;
+
         span {
-          .fa();
-          text-decoration: none;
-          color: white;
+          color: @darkblue;
         }
       }
     }
   }
 
-  @media screen and (max-width: @mobile) {
-    & {
-      flex-direction: column;
+  .contact {}
 
-      .part {
-        margin: 20px 0;
-        width: 100%;
-      }
-    }
+  .address {
   }
 }
 

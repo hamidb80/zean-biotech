@@ -28,24 +28,8 @@ const defaultData = {
   ],
 
   footerParts: [
-    {
-      title: 'محصولات', items: [
-        { name: "کیت استخراج DNA از بزاق", link: `${address}/contactus/` },
-        { name: "کیت استخراج DNA از خون", link: `${address}/contactus/` },
-      ]
-    },
-    {
-      title: 'خدمات', items: [
-        { name: "کیت استخراج DNA از بزاق", link: `${address}/contactus/` },
-        { name: "کیت استخراج DNA از خون", link: `${address}/contactus/` },
-      ]
-    },
-    {
-      title: 'تماس با ما', items: [
-        { name: "کیت استخراج DNA از بزاق", link: `${address}/contactus/` },
-        { name: "کیت استخراج DNA از خون", link: `${address}/contactus/` },
-      ]
-    },
+    { title: 'محصولات', link: `${address}/contactus/` },
+    { title: 'خدمات', link: `${address}/about-us/`},
   ]
 }
 
