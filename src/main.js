@@ -3,7 +3,9 @@ import path from "path"
 import express from 'express'
 import Mustache from 'mustache'
 
-import { home as homeTemp, combinePartials, combineData, stagePartial } from "./views.js"
+import { combinePartials, combineData, stagePartial } from "./views.js"
+import * as VIEWS from './views.js'
+
 import * as cfg from "./config.js"
 
 const app = express()
@@ -12,7 +14,7 @@ app.use('/static', express.static(path.join(cfg.__dirname, 'static/')))
 // routes -----------------------------------------------
 
 app.get('/', async (req, res) => {
-  res.send(Mustache.render(homeTemp, combineData({
+  res.send(Mustache.render(VIEWS.home, combineData({
     'stages': [
       {
         title: 'تولید کیت های آزمایشگاهی استخراج اسید نوکلئیک',
@@ -43,28 +45,38 @@ app.get('/', async (req, res) => {
 })
 app.get('/products/', async (req, res) => {
   res.send(Mustache.render(
-    homeTemp,
-    combineData(),
+    VIEWS.products,
+    combineData({
+      'products': [
+        {
+          name: "",
+          desciption: "",
+          img_url: "",
+          img_alt: "",
+          link: "",
+        },
+      ]
+    }),
     combinePartials()
   ))
 })
 app.get('/services/', async (req, res) => {
   res.send(Mustache.render(
-    homeTemp,
+    VIEWS.services,
     combineData(),
     combinePartials()
   ))
 })
 app.get('/contact-us/', async (req, res) => {
   res.send(Mustache.render(
-    homeTemp,
+    VIEWS.contactus,
     combineData(),
     combinePartials()
   ))
 })
 app.get('/about-us/', async (req, res) => {
   res.send(Mustache.render(
-    homeTemp,
+    VIEWS.aboutus,
     combineData(),
     combinePartials()
   ))

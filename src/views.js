@@ -21,15 +21,15 @@ const defaultPartials = [
 const defaultData = {
   navs: [
     { name: 'صفحه اصلی', link: `${address}/` },
-    { name: 'محصوالات', link: `${address}/products/` },
+    { name: 'محصولات', link: `${address}/products/` },
     { name: 'خدمات', link: `${address}/services/` },
     { name: 'درباره ما', link: `${address}/about-us/` },
     { name: 'تماس با ما', link: `${address}/contact-us/` },
   ],
 
   footerParts: [
-    { title: 'محصولات', link: `${address}/contactus/` },
-    { title: 'خدمات', link: `${address}/about-us/`},
+    { title: 'محصولات', link: `${address}/products/` },
+    { title: 'خدمات', link: `${address}/services/`},
   ]
 }
 
@@ -46,4 +46,9 @@ export function combineData(data = {}) {
 }
 
 export const
-  home = loadView('views', 'pages', 'home.html')
+  home = loadView('views', 'pages', 'home.html'),
+  aboutus = loadView('views', 'pages', 'about-us.html'),
+  contactus = loadView('views', 'pages', 'contact-us.html'),
+
+  products = loadView('views', 'pages', 'products.html'),
+  services = loadView('views', 'pages', 'services.html')

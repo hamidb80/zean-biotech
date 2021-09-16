@@ -96,25 +96,25 @@ footer {
   direction: rtl;
   .fa();
 
-  .part{
+  .part {
     width: 100%;
     border-bottom: 2px solid lighten(@darkblue, 6%);
     padding: 8px 0;
 
-    .title{
+    .title {
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 8px;
       color: white;
     }
 
-    .body{
+    .body {
       margin-right: 8px;
       color: lighten(@darkblue, 80%);
     }
   }
 
-  .part:last-child{
+  .part:last-child {
     border-bottom: none;
   }
 
@@ -129,14 +129,14 @@ footer {
       text-decoration: none;
       .rounded();
       .transition();
-      
+
       .icon {
         display: inline-block;
         background: url("/static/pics/left-triangle.svg");
         .square(16px);
         margin-left: 4px;
       }
-      
+
       .text {
         .fa();
         font-size: 16px;
@@ -152,11 +152,6 @@ footer {
       }
     }
   }
-
-  .contact {}
-
-  .address {
-  }
 }
 
 .after-footer {
@@ -165,7 +160,7 @@ footer {
   justify-content: center;
   align-items: center;
   height: 32px;
-  background-color: white;
+  background-color: @ligthgray;
   color: @skyblue;
   font-weight: bold;
 }
@@ -174,6 +169,14 @@ footer {
 
 .btn {
   padding: 8px 16px;
+}
+
+.box{
+  .shadow();
+  .rounded();
+  margin: 12px 20px;
+  
+  background-color: white;
 }
 
 // ---------------------------------
