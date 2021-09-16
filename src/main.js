@@ -49,7 +49,7 @@ app.get('/products/', async (req, res) => {
     combineData({
       'products': [
         {
-          name: "",
+          name: "از بزاقدهان",
           desciption: "",
           img_url: "",
           img_alt: "",
@@ -63,7 +63,17 @@ app.get('/products/', async (req, res) => {
 app.get('/services/', async (req, res) => {
   res.send(Mustache.render(
     VIEWS.services,
-    combineData(),
+    combineData({
+      'products': [
+        {
+          name: "از بزاقدهان",
+          desciption: "",
+          img_url: "",
+          img_alt: "",
+          link: "",
+        },
+      ]
+    }),
     combinePartials()
   ))
 })
