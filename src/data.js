@@ -19,7 +19,7 @@ const templateTypeMap = {
 
 function parseData(item) {
   let templString = fs.readFileSync(
-    path.join(__dirname, "src", "template", templateTypeMap[item.type]), 'utf8')
+    path.join(__dirname, "views", "templates", templateTypeMap[item.type]), 'utf8')
 
   return Mustache.render(templString, { "content": item.content })
 }
