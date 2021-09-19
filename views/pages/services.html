@@ -9,8 +9,28 @@
 <body>
   {{> header}}
 
-  services
-  
+  <div class="services article-wrapper">
+
+    {{#services}}
+
+    <div class="box">
+      <div class="header">
+        <h2 class="title"> {{title}} </h2>
+        <div class="image">
+          <img src="{{img_url}}" alt="{{img_alt}}">
+        </div>
+      </div>
+      <div class="body">
+        {{{body}}}
+      </div>
+
+    </div>
+
+    {{/services}}
+  </div>
+
+
   {{> footer}}
 </body>
+
 </html>

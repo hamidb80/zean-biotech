@@ -12,7 +12,7 @@ body {
   background-color: @ligthgray;
 }
 
-.header {
+.main-header {
   position: relative;
   display: flex;
   flex-direction: row-reverse;
@@ -21,7 +21,6 @@ body {
   height: @header-height;
   padding: 0 24px;
   background-color: white;
-  .shadow();
 
   img {
     height: @header-height - 10px;
@@ -51,7 +50,7 @@ body {
   }
 }
 
-.nav {
+.main-nav {
   display: grid;
   grid-template-columns: repeat(5, calc(100% / 5));
   width: 100%;
@@ -86,7 +85,7 @@ body {
   }
 }
 
-footer {
+.main-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -171,22 +170,107 @@ footer {
   padding: 8px 16px;
 }
 
-.article {
-  .shadow();
-  background-color: white;
-}
+.article-wrapper {}
 
 .box {
-  .article();
-  .rounded();
-  margin: 12px 20px;
+  background-color: white;
+  .shadow();
+  .px(40px);
+  .py(32px);
+  .my(80px);
 
-}
+  &.automated {
+    &>* {
+      .fa();
+    }
 
-.content {
-  .article();
-  .my(12px);
+    p {
+      .my(8px);
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    .image {
+      img {
+        .rounded();
+        .square(256px);
+      }
+    }
+
+    .title {
+      .fa();
+    }
+  }
+
+  .body {
+    .fa();
+    font-size: 18px;
+    margin-top: 16px;
+
+    p {
+      .my(16px);
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .icon {
+          flex-shrink: 0;
+          .square(24px);
+          margin-left: 6px;
+        }
+
+        .mx(8px);
+      }
+    }
+  }
+
+  @media screen and (max-width: @mobile) {
+    & {
+      .px(12px);
+
+      .header {
+        flex-direction: column;
+
+        .title {
+          margin-bottom: 20px;
+        }
+
+        .image {
+          img {
+            max-width: 100%;
+            width: auto;
+            max-height: 300px;
+          }
+        }
+      }
+
+      .body {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 // ---------------------------------
+::-moz-selection {
+  color: white;
+  background: #d19696;
+}
+
+::selection {
+  color: white;
+  background: #d19696;
+}
+
 @import url("./home.less");

@@ -1,8 +1,13 @@
-<footer>
+<footer class="main-footer">
   <div class="part links">
     <div class="body">
       {{#footerParts}}
-      {{> footer-part}}
+      <a href="{{link}}">
+        <div class="icon"></div>
+        <span class="text">
+          {{ title }}
+        </span>
+      </a>
       {{/footerParts}}
     </div>
   </div>

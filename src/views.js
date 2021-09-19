@@ -13,7 +13,7 @@ function loadView(...viewPath) {
 }
 
 const defaultPartials = [
-  'meta', 'footer', 'header', 'footer-part',
+  'meta', 'footer', 'header',
 ].reduce((res, vname) => setObj(res, vname,
   loadView("views", "components", vname + '.html')
 ), {})

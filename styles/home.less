@@ -32,9 +32,11 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      .my(32px);
 
       img {
         max-width: 100%;
+        max-height: 400px;
       }
     }
 
@@ -131,7 +133,6 @@
 
     .image{
       img {
-        border-color: @skyblue;
         .shadow-ready(true, @skyblue);
       }
     }
@@ -164,7 +165,6 @@
 
     .image{
       img {
-        border-color: white;
         .shadow-ready(false, white);
       }
     }

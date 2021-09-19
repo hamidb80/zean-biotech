@@ -5,7 +5,7 @@
   "description": "zean biotech official website",
   "main": "main.js",
   "scripts": {
-    "dev": "nodemon src/main.js",
+    "dev": "nodemon --experimental-json-modules src/main.js",
     "style": "less-watch-compiler.cmd  ./styles/  static/dist/ app.less",
     "test": "test"
   },

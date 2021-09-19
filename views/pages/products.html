@@ -9,8 +9,26 @@
 <body>
   {{> header}}
 
-  products
+  <div class="products article-wrapper">
+    {{#products}}
+
+    <div class="box" id="{{id}}">
+      <div class="header">
+        <h2 class="title"> {{title}} </h2>
+        <div class="image">
+          <img src="{{img_url}}" alt="{{img_alt}}">
+        </div>
+      </div>
+
+      <div class="body">
+        {{{body}}}
+      </div>
+    </div>
+
+    {{/products}}
+  </div>
 
   {{> footer}}
 </body>
+
 </html>
