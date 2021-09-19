@@ -38,14 +38,14 @@ app.get("/services/", async (req, res) => {
 app.get("/contact-us/", async (req, res) => {
   res.send(Mustache.render(
     VIEWS.contactus,
-    combineData(),
+    combineData({pageTitle: 'تماس با ما'}),
     combinePartials()
   ))
 })
 app.get("/about-us/", async (req, res) => {
   res.send(Mustache.render(
     VIEWS.aboutus,
-    combineData(),
+    combineData({pageTitle: "درباره ما"}),
     combinePartials()
   ))
 })
