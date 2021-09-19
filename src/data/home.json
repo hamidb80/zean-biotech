@@ -4,8 +4,8 @@
     {
       "title": "تولید کیت های آزمایشگاهی استخراج اسید نوکلئیک",
       "pic_url": "/static/pics/images/boxing-1.png",
-      "pic_alt": "dsad",
-      "link": "/products/#",
+      "pic_alt": "",
+      "link": "/products/#1",
       "icons": [
         "/static/pics/icons/aid-kit.svg"
       ]
@@ -13,8 +13,8 @@
     {
       "title": "تعیین ژنوتیپ گوسفندان چند قلوزا",
       "pic_url": "/static/pics/images/sheep.png",
-      "pic_alt": "dsad",
-      "link": "/services/#",
+      "pic_alt": "",
+      "link": "/services/#2",
       "icons": [
         "/static/pics/icons/gene.svg"
       ]
@@ -22,8 +22,8 @@
     {
       "title": "مواد و تجهیزات آزمایشگاه",
       "pic_url": "/static/pics/images/lab.png",
-      "pic_alt": "/services/#",
-      "link": "ds",
+      "pic_alt": "",
+      "link": "/services/#1",
       "icons": [
         "/static/pics/icons/dropper.svg",
         "/static/pics/icons/lab-flask.svg"

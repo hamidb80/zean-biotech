@@ -1,5 +1,5 @@
 kind: ExternalService
 name: zean-biotech
 spec: 
-  image: zean:0.3
+  image: zean:0.5
   port: 3000
