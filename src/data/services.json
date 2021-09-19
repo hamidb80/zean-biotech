@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "مواد و تجهیزات آزمایشگاه",
-      "img_url": "/static/pics/lab.png",
+      "img_url": "/static/pics/images/lab.png",
       "img_alt": "what the hell",
       "link": "",
       "body": [
@@ -28,7 +28,7 @@
     {
       "id": 2,
       "title": "تعیین ژنوتیپ گوسفندان چند قلوزا",
-      "img_url": "/static/pics/sheep.png",
+      "img_url": "/static/pics/images/sheep.png",
       "img_alt": "what the hell",
       "link": "",
       "body": [

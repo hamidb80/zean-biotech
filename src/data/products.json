@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "کیت استخراج DNA از خون",
-      "img_url": "/static/pics/boxing.png",
+      "img_url": "/static/pics/images/boxing-1.png",
       "img_alt": "what the hell",
       "link": "",
       "body": [
@@ -51,7 +51,7 @@
     {
       "id": 2,
       "title": "کیت استخراج DNA از بزاق",
-      "img_url": "/static/pics/boxing.png",
+      "img_url": "/static/pics/images/boxing-2.png",
       "img_alt": "what the hell",
       "link": "",
       "body": [

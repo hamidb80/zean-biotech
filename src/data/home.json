@@ -2,30 +2,30 @@
   "stages": [
     {
       "title": "تولید کیت های آزمایشگاهی استخراج اسید نوکلئیک",
-      "pic_url": "/static/pics/boxing.png",
+      "pic_url": "/static/pics/images/boxing-1.png",
       "pic_alt": "dsad",
       "link": "ds",
       "icons": [
-        "/static/pics/aid-kit.svg"
+        "/static/pics/icons/aid-kit.svg"
       ]
     },
     {
       "title": "تعیین ژنوتیپ گوسفندان چند قلوزا",
-      "pic_url": "/static/pics/sheep.png",
+      "pic_url": "/static/pics/images/sheep.png",
       "pic_alt": "dsad",
       "link": "ds",
       "icons": [
-        "/static/pics/gene.svg"
+        "/static/pics/icons/gene.svg"
       ]
     },
     {
       "title": "مواد و تجهیزات آزمایشگاه",
-      "pic_url": "/static/pics/lab.png",
+      "pic_url": "/static/pics/images/lab.png",
       "pic_alt": "dsad",
       "link": "ds",
       "icons": [
-        "/static/pics/dropper.svg",
-        "/static/pics/lab-flask.svg"
+        "/static/pics/icons/dropper.svg",
+        "/static/pics/icons/lab-flask.svg"
       ]
     }
   ]
