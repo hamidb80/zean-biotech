@@ -20,16 +20,16 @@ const defaultPartials = [
 
 const defaultData = {
   navs: [
-    { name: 'صفحه اصلی', link: `${address}/` },
-    { name: 'محصولات', link: `${address}/products/` },
-    { name: 'خدمات', link: `${address}/services/` },
-    { name: 'درباره ما', link: `${address}/about-us/` },
-    { name: 'تماس با ما', link: `${address}/contact-us/` },
+    { name: 'صفحه اصلی', link: '/' },
+    { name: 'محصولات', link: '/products/' },
+    { name: 'خدمات', link: '/services/' },
+    { name: 'درباره ما', link: '/about-us/' },
+    { name: 'تماس با ما', link: '/contact-us/' },
   ],
 
   footerParts: [
-    { title: 'محصولات', link: `${address}/products/` },
-    { title: 'خدمات', link: `${address}/services/`},
+    { title: 'محصولات', link: '/products/' },
+    { title: 'خدمات', link: '/services/' },
   ]
 }
 
