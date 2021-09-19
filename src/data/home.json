@@ -23,7 +23,6 @@
       "title": "مواد و تجهیزات آزمایشگاه",
       "pic_url": "/static/pics/images/lab.png",
       "pic_alt": "",
-      "link": "/services/#1",
       "icons": [
         "/static/pics/icons/dropper.svg",
         "/static/pics/icons/lab-flask.svg"
