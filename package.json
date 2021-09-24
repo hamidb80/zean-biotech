@@ -10,7 +10,7 @@
     "style-build": "lessc ./styles/app.less  static/dist/app.css",
     "start": "node --experimental-json-modules src/main.js",
     "update": "fandogh image publish --version 0.6",
-    "deploy": "fandogh service apply -f fservice.yml "
+    "deploy": "fandogh service apply -f fservice.yml"
   },
   "keywords": [
     "website",
