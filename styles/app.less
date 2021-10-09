@@ -2,6 +2,8 @@
 
 @header-height: 60px;
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +13,13 @@
 body {
   background-color: @ligthgray;
 }
+
+a {
+  text-decoration: none;
+  color: @skyblue;
+}
+
+// -------------------
 
 .main-header {
   position: relative;
@@ -109,7 +118,11 @@ body {
 
     .body {
       margin-right: 8px;
-      color: lighten(@darkblue, 80%);
+
+      &,
+      & a {
+        color: lighten(@darkblue, 80%);
+      }
     }
   }
 
@@ -178,6 +191,10 @@ body {
   .px(40px);
   .py(32px);
   .my(80px);
+
+  a {
+    font-style: italic;
+  }
 
   &.automated {
     &>* {
