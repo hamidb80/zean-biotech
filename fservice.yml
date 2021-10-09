@@ -5,6 +5,10 @@ spec:
   port: 3000
 
   allow_http: off
-  # disable_default_domains: on
+  disable_default_domains: on
+  
+  resources:
+    memory: 100Mi
+    
   domains:
     - name: zeanbiotech.ir
