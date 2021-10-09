@@ -9,7 +9,7 @@
     "style-watch": "less-watch-compiler.cmd  ./styles/  static/dist/ app.less",
     "build": "lessc ./styles/app.less  static/dist/app.css",
     "start": "node --experimental-json-modules src/main.js",
-    "update": "fandogh image publish --version 0.6",
+    "update": "fandogh image publish --version",
     "deploy": "fandogh service apply -f fservice.yml"
   },
   "keywords": [
