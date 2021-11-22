@@ -2,3 +2,5 @@ node_modules/
 static/dist/*.css
 temp.*
 .fandogh/
+
+yarn-error.log
