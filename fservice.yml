@@ -1,7 +1,7 @@
 kind: ExternalService
 name: zean-biotech
 spec: 
-  image: zean:0.6.1
+  image: zean:0.6.6
   port: 3000
 
   allow_http: off
