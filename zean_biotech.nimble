@@ -4,16 +4,16 @@ author        = "hamidb80"
 description   = "a static website"
 license       = "MIT"
 srcDir        = "src"
-# bin           = @["zean_biotech"]
+bin           = @["builder"]
 
 
 # --- Dependencies
 requires "nim >= 1.6.6"
 requires "yaml >= 1.0.0"
-requires "marggers"
+requires "marggers >= 0.3.3"
+requires "karax >= 1.2.2"
+# "less": "^4.1.1"
 
-# "less": "^4.1.1",
-# "less-watch-compiler": "^1.16.3",
-
-
-# --- Tasks
+task go, "":
+  exec "nimble build"
+  exec "./builder.exe"
