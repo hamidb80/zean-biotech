@@ -17,8 +17,9 @@ func list(): VNode =
   buildhtml ul:
     for c in content:
       item(c)
-      
-func article*(
+
+  
+func article(
   id, text, title, img_url, img_alt: string,
   body: VNode): VNode =
 
@@ -35,7 +36,7 @@ func article*(
         discard
         # elem body
 
-func footer: Vnode =
+func footer(): Vnode =
   let title = "he"
 
   buildHtml footer(class = "main-footer"):
@@ -85,7 +86,7 @@ func footer: Vnode =
       ©
       """
 
-func header: VNode =
+func header(): VNode =
   buildHtml header(class = "main-header"):
     img(src = "/static/pics/logo.png", alt = "")
     h1:
@@ -96,7 +97,7 @@ func header: VNode =
       a(href = "{{link}}"):
         text name
 
-func head: VNode = 
+func head(): VNode = 
   buildHtml head():
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -109,7 +110,7 @@ func head: VNode =
     title:
       text "{{ pageTitle }} - زیست اکسیر آینده نگر"
   
-func stage: Vnode = 
+func stage(): Vnode = 
   buildHtml tdiv(class="stage"):
     tdiv(class="top triangle")
     tdiv(class="inside"):
@@ -131,7 +132,19 @@ func stage: Vnode =
     tdiv(class="bottom triangle")
 
 
-func aboutus: VNode = 
+func homePage*(): VNode = 
+  buildHtml html:
+    head()
+    body():
+      header()
+
+      tdiv(class="stages"):
+        for s in stages:
+          stage()
+
+      footer()
+
+func aboutUsPage*(): VNode = 
   buildHtml body:
     header()
 
@@ -156,7 +169,7 @@ func aboutus: VNode =
 
     footer()
 
-func contactUs: VNode = 
+func contactUsPage*(): VNode = 
   buildHtml html:
     head()
     body():
@@ -197,19 +210,7 @@ func contactUs: VNode =
 
       footer()
 
-func home: VNode = 
-  buildHtml html:
-    head()
-    body():
-      header()
-
-      tdiv(class="stages"):
-        for s in stages:
-          stage()
-
-      footer()
-
-func products: VNode = 
+func productsPage*(): VNode = 
   buildHtml html:
     head()
     body():
@@ -221,7 +222,7 @@ func products: VNode =
 
       footer()
 
-func services: VNode = 
+func servicesPage*(): VNode = 
   buildHtml html:
     head()
 
