@@ -1,29 +1,50 @@
-import std/[strformat, sequtils]
-import karax/[karaxdsl, vdom], marggers
+import std/[strformat, sequtils, strutils]
+import karax/[karaxdsl, vdom], marggers, marggers/element
 import types
 
 # --- basics
 
-# func space(content: string): VNode =
-#   buildhtml tdiv(class = "space-y")
+func markdown2html*(s: string): seq[VNode]
 
-# func title(content: string): VNode =
-#   buildhtml h4:
-#     text content
+func spaceB(): VNode =
+  buildhtml tdiv(class = "space-y")
 
-# func item(content: VNode): VNode =
-#   result = buildhtml li:
-#     span(class = "icon check-icon")
+func titleB(content: VNode): VNode =
+  buildhtml h3:
+    content
 
-#   result.add content
 
-# func list(): VNode =
-#   buildhtml ul:
-#     for c in content:
-#       item(c)
+func itemB(contents: seq[VNode]): VNode =
+  result = buildhtml li:
+    span(class = "icon check-icon")
+    for c in contents:
+      c
+
+func listB(items: seq[VNode]): VNode =
+  buildhtml ol:
+    for i in items:
+      i
+
+func paragraphB(items: seq[VNode]): VNode =
+  buildHtml p:
+    for i in items:
+      i
 
 func m2h(elem: MarggersElement): VNode =
-  discard
+  if elem.isText:
+    if elem.str.startsWith "------":
+      spaceB()
+    else:
+      buildHtml span:
+        text elem.str
+  else:
+    let subs = elem.content.map(m2h)
+    case elem.tag
+    of ol: listB subs
+    of li: itemB subs
+    of h3: titleB subs[0]
+    of p: paragraphB subs
+    else: raise newException(ValueError, "not implmeneted")
 
 func markdown2html*(s: string): seq[VNode] =
   {.cast(noSideEffect).}:
@@ -134,7 +155,8 @@ func articleC(artcl: Article): VNode =
           img(src = artcl.img_url, alt = artcl.img_alt)
 
       tdiv(class = "body"):
-        markdown2html artcl.body
+        for e in markdown2html artcl.body:
+          e
 
 func stageC(s: Stage): Vnode =
   buildHtml tdiv(class = "stage"):
@@ -263,4 +285,3 @@ func servicesP*(services: seq[Article]): VNode =
           articleC s
 
       footerC()
-
