@@ -1,7 +1,0 @@
-.fandogh/
-static/dist/*.css
-output/
-
-play.*
-temp.*
-*.exe
