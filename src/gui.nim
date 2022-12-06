@@ -1,5 +1,4 @@
 import karax/[karaxdsl, vdom]
-import marggers
 
 func space(content: string): VNode = 
   buildhtml tdiv(class="space-y")
@@ -8,13 +7,17 @@ func title(content: string): VNode =
   buildhtml h4:
    text content
 
-func list: VNode = 
+func item(content: VNode): VNode = 
+  result = buildhtml li:
+    span(class="icon check-icon")
+
+  result.add content
+
+func list(): VNode = 
   buildhtml ul:
     for c in content:
-      li:
-        i(class="icon check-icon")
-        text c
-
+      item(c)
+      
 func article*(
   id, text, title, img_url, img_alt: string,
   body: VNode): VNode =
