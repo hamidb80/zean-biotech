@@ -1,6 +1,7 @@
-node_modules/
-static/dist/*.css
-temp.*
 .fandogh/
+static/dist/*.css
+output/
 
-yarn-error.log
+play.*
+temp.*
+*.exe
