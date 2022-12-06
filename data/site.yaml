@@ -1,4 +1,4 @@
-stages:
+home.stages:
 - title: تولید کیت های آزمایشگاهی استخراج اسید نوکلئیک
   pic_url: /static/pics/images/boxing-1.webp
   pic_alt: تولید کیت های آزمایشگاهی استخراج اسید نوکلئید
@@ -19,3 +19,23 @@ stages:
   icons:
   - dropper-icon
   - lab-flask-icon
+
+services:
+- id: 2
+  title: تعیین ژنوتیپ گوسفندان چند قلوزا
+  img_url: /static/pics/images/sheep.webp
+  img_alt: تعیین ژنوتیپ گوسفندان چند قلوزا
+  body: s2.md
+
+products:
+- id: 1
+  title: کیت استخراج DNA از خون
+  img_url: /static/pics/images/boxing-1.webp
+  img_alt: کیت استخراج DNA از خون
+  body: p1.md
+  
+- id: 2
+  title: کیت استخراج DNA از بزاق
+  img_url: /static/pics/images/boxing-2.webp
+  img_alt: کیت استخراج DNA از بزاق
+  body: p2.md

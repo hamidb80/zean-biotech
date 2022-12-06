@@ -3,11 +3,12 @@
 #    /services/    خدمات
 
 import std/[os]
-import marggers, karax/[vdom]
+import marggers, karax/[vdom], yaml
 import gui
 
 const dest = "./output/"
 
+echo loadas[YamlNode](readFile "./data/services.yaml")
 
 writeFile dest/"index.html", $homePage()
 # writeFile dest/"products.html", $productsPage()
