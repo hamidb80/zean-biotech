@@ -2,14 +2,14 @@ stages:
 - title: تولید کیت های آزمایشگاهی استخراج اسید نوکلئیک
   img_url: /static/pics/images/boxing-1.webp
   img_alt: تولید کیت های آزمایشگاهی استخراج اسید نوکلئید
-  link: /products/#1
+  link: /products.html#1
   icons:
   - aid-kit-icon
 
 - title: تعیین ژنوتیپ گوسفندان چند قلوزا
   img_url: /static/pics/images/sheep.webp
   img_alt: تعیین ژنوتیپ گوسفندان چند قلوزا
-  link: /services/#2
+  link: /services.html#2
   icons:
   - gen-icon
 

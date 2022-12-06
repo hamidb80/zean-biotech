@@ -21,12 +21,17 @@ func itemB(contents: seq[VNode]): VNode =
       c
 
 func listB(items: seq[VNode]): VNode =
-  buildhtml ol:
+  buildhtml ul:
     for i in items:
       i
 
 func paragraphB(items: seq[VNode]): VNode =
   buildHtml p:
+    for i in items:
+      i
+
+func boldB(items: seq[VNode]): VNode =
+  buildHtml bold:
     for i in items:
       i
 
@@ -40,11 +45,12 @@ func m2h(elem: MarggersElement): VNode =
   else:
     let subs = elem.content.map(m2h)
     case elem.tag
-    of ol: listB subs
+    of ul: listB subs
     of li: itemB subs
     of h3: titleB subs[0]
     of p: paragraphB subs
-    else: raise newException(ValueError, "not implmeneted")
+    of strong: boldB subs
+    else: raise newException(ValueError, "not implmeneted: " & $elem.tag)
 
 func markdown2html*(s: string): seq[VNode] =
   {.cast(noSideEffect).}:
@@ -58,59 +64,63 @@ type Link = tuple
 const
   navs: seq[Link] = @[
     ("/", "صفحه اصلی"),
-    ("/products/", "محصولات"),
-    ("/services/", "خدمات"),
-    ("/about-us/", "درباره ما"),
-    ("/contact-us/", "تماس با ما"),
+    ("/products.html", "محصولات"),
+    ("/services.html", "خدمات"),
+    ("/about-us.html", "درباره ما"),
+    ("/contact-us.html", "تماس با ما"),
   ]
   footerParts: seq[Link] = @[
-    ("/products/", "محصولات"),
-    ("/services/", "خدمات")
+    ("/products.html", "محصولات"),
+    ("/services.html", "خدمات")
   ]
 
 
 func footerC(): Vnode =
-  buildHtml footer(class = "main-footer"):
-    tdiv(class = "part links"):
-      tdiv(class = "body"):
-        for p in footerParts:
-          a(href = p.link):
-            tdiv(class = "icon")
-            span(class = "text"):
-              text p.name
+  buildHtml tdiv:
+    footer(class = "main-footer"):
+      tdiv(class = "part links"):
+        tdiv(class = "body"):
+          for p in footerParts:
+            a(href = p.link):
+              tdiv(class = "icon")
+              span(class = "text"):
+                text p.name
 
-    tdiv(class = "part contact"):
-      tdiv(class = "title"):
-        text "تماس با ما"
+      tdiv(class = "part contact"):
+        tdiv(class = "title"):
+          text "تماس با ما"
 
-      tdiv(class = "body"):
-        text """
-          031-36502820
-          داخلی
-          297
-          شنبه تا چهارشنبه ساعت 10 تا 17
-          پنج شنبه ها ساعت 10 تا 13
-        """
+        tdiv(class = "body"):
+          p:
+            text """
+            031-36502820
+            داخلی
+            297
+            شنبه تا چهارشنبه ساعت 10 تا 17
+            پنج شنبه ها ساعت 10 تا 13
+          """
 
-        text """
-        09901880418
-        شماره همراه و واتساپ شرکت
-        """
+          p:
+            text """
+          09901880418
+          شماره همراه و واتساپ شرکت
+          """
 
-        text "ایمیل:"
-        a(href = "mailto:info@zeanbiotech.ir"):
-          text "info@zeanbiotech.ir"
+          p:
+            text "ایمیل: "
+            a(href = "mailto:info@zeanbiotech.ir"):
+              text "info@zeanbiotech.ir"
 
-    tdiv(class = "part address"):
-      tdiv(class = "title"):
-        text "آدرس"
+      tdiv(class = "part address"):
+        tdiv(class = "title"):
+          text "آدرس"
 
-      tdiv(class = "body"):
-        text """
-        اصفهان، کیلومتر 5 جاده اصفهان شیراز، سپاهان شهر، بلوار غدیر، بلوار قائم جنوبی، دانشگاه شهید اشرفی اصفهانی، مرکز
-        رشد،
-        شرکت زیست اکسیر آینده نگر
-        """
+        tdiv(class = "body"):
+          text """
+          اصفهان، کیلومتر 5 جاده اصفهان شیراز، سپاهان شهر، بلوار غدیر، بلوار قائم جنوبی، دانشگاه شهید اشرفی اصفهانی، مرکز
+          رشد،
+          شرکت زیست اکسیر آینده نگر
+          """
 
     tdiv(class = "after-footer"):
       text """
@@ -171,7 +181,7 @@ func stageC(s: Stage): Vnode =
 
         tdiv(class = "icons"):
           for ic in s.icons:
-            tdiv(class = ic)
+            tdiv(class = fmt"icon {ic}")
 
         if s.link != "":
           a(class = "btn see-more", href = s.link):
@@ -200,23 +210,27 @@ func aboutUsP*(): VNode =
       headerC()
 
       tdiv(class = "box automated"):
-        text """
+        p:
+          text """
           درسال 1399، شرکت زیست اکسیر آینده نگر توسط چند عضو هیئت علمی دانشگاه با هدف تامین نیازهای مراکز تحقیقاتی و تشخیصی
           فعال در زمینه بیولوژی مولکولی و بیوتکنولوژی شروع به فعالیت کرد.
-        """
+          """
 
-        text """
+        p:
+          text """
           در ابتدا این شرکت فعالیت خود را به صورت کار خدماتی در زمینه اصلاح نژاد دام (تعیین گوسفندان هتروزیگوت و هموزیگوت از
           نظر ژن چند قلوزائی) شروع کرد و پس از شروع به تولید کیت های استخراج اسیدهای نوکلئیک نمود.
-        """
+          """
 
-        text """
+        p:
+          text """
           مشخصه اصلی کیت های این شرکت سرعت و کیفیت بالا و در عین حال قیمت پائین آن می باشد.
-        """
+          """
 
-        text """
+        p:
+          text """
           هم اکنون این شرکت در دو بخش خدمات و تولیدات افتخار این را دارد که در خدمت پژوهشگران و مشتریان عزیز باشد.
-        """
+          """
 
       footerC()
 

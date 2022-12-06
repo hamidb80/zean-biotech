@@ -2,16 +2,26 @@ import std/[os, streams]
 import karax/[vdom], yaml
 import types, utils, gui
 
-const dest = "./output/"
-let site = loadYaml[Site]("./data/site.yaml")
+
+proc loadSiteData(path: string): Site = 
+  result = loadYaml[Site](path)
+
+  template loadContents(field): untyped =
+    for a in mitems result.field:
+      a.body = readfile "./data/articles"/a.body
+
+  loadContents products
+  loadContents services
 
 when isMainModule:
+  const dest = "./output/"
+  let site = loadSiteData "./data/site.yaml"
+
   if dirExists dest:
     removeDir dest
   
   copyDir "./static", dest/"static"
 
-  # -- build and copy styles
   discard execShellCmd "lessc ./styles/app.less " & dest/"static/dist/app.css"
 
   writeFile dest/"index.html", $homeP(site.stages)
