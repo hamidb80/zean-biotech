@@ -1,9 +1,3 @@
-{
-  "name": "zeanbiotech",
-  "version": "0.0.3",
-  "type": "module",
-  "description": "zean biotech official website",
-  "main": "main.js",
   "scripts": {
     "dev": "nodemon --experimental-json-modules src/main.js",
     "style-watch": "less-watch-compiler  ./styles/  static/dist/ app.less",
@@ -12,21 +6,7 @@
     "update": "fandogh image publish --version",
     "deploy": "fandogh service apply -f fservice.yml"
   },
-  "keywords": [
-    "website",
-    "zean",
-    "biotech",
-    "zeanbiotech"
-  ],
-  "author": "hamidb80",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "mustache": "^4.2.0"
-  },
+
   "devDependencies": {
     "less": "^4.1.1",
     "less-watch-compiler": "^1.16.3",
-    "nodemon": "^2.0.12"
-  }
-}

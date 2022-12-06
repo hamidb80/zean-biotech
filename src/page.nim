@@ -1,5 +1,13 @@
 import karax/[karaxdsl, vdom]
 
+
+func space(content: string): VNode = 
+  buildhtml tdiv(class="space-y")
+
+func title(content: string): VNode = 
+  buildhtml h4:
+   text content
+
 func list: VNode = 
   buildhtml ul:
     for c in content:
