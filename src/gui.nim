@@ -1,4 +1,6 @@
 import karax/[karaxdsl, vdom]
+import types
+
 
 func space(content: string): VNode = 
   buildhtml tdiv(class="space-y")

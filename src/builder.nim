@@ -2,15 +2,22 @@
 #    /products/    محصولات
 #    /services/    خدمات
 
-import std/[os]
+import std/[os, streams]
 import marggers, karax/[vdom], yaml
-import gui
+import types #, gui
 
 const dest = "./output/"
 
-echo loadas[YamlNode](readFile "./data/services.yaml")
+proc loadData[T](path: string): T =
+  var s = newFileStream("./data/site.yaml")
+  load(s, result)
+  s.close
 
-writeFile dest/"index.html", $homePage()
+
+let site = loadData[Site]("./data/site.yaml")
+echo site
+
+# writeFile dest/"index.html", $homePage()
 # writeFile dest/"products.html", $productsPage()
 # writeFile dest/"services.html", $servicesPage()
 # writeFile dest/"about-us.html", $aboutUsPage()
