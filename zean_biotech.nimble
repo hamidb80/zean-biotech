@@ -14,8 +14,3 @@ requires "yaml >= 1.0.0"
 
 
 # --- Tasks
-task sw, "style-watch":
-  exec "less-watch-compiler  ./styles/  static/dist/ app.less"
-
-task css, "compile style sheets":
-  exec "lessc ./styles/app.less  static/dist/app.css"

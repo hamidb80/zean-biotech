@@ -1,4 +1,4 @@
-import std/[strformat]
+import std/[strformat, sequtils]
 import karax/[karaxdsl, vdom], marggers
 import types
 
@@ -22,8 +22,12 @@ import types
 #     for c in content:
 #       item(c)
 
-func markdown2html*(s: string): VNode = 
+func m2h(elem: MarggersElement): VNode =
   discard
+
+func markdown2html*(s: string): seq[VNode] =
+  {.cast(noSideEffect).}:
+    parseMarggers(s).map(m2h)
 
 # --- components
 
@@ -44,7 +48,7 @@ const
   ]
 
 
-func footerComponent(): Vnode =
+func footerC(): Vnode =
   buildHtml footer(class = "main-footer"):
     tdiv(class = "part links"):
       tdiv(class = "body"):
@@ -66,6 +70,7 @@ func footerComponent(): Vnode =
           شنبه تا چهارشنبه ساعت 10 تا 17
           پنج شنبه ها ساعت 10 تا 13
         """
+
         text """
         09901880418
         شماره همراه و واتساپ شرکت
@@ -92,7 +97,7 @@ func footerComponent(): Vnode =
       ©
       """
 
-func headerComponent(): VNode =
+func headerC(): VNode =
   buildHtml tdiv:
     header(class = "main-header"):
       img(src = "/static/pics/logo.png", alt = "site logo")
@@ -104,7 +109,7 @@ func headerComponent(): VNode =
         a(href = n.link):
           text n.name
 
-func headComponent(pageTitle: string): VNode =
+func headC(pageTitle: string): VNode =
   buildHtml head():
     meta(charset = "UTF-8")
     meta(http-equiv = "X-UA-Compatible", content = "IE=edge")
@@ -118,24 +123,20 @@ func headComponent(pageTitle: string): VNode =
       text fmt"{pageTitle} - زیست اکسیر آینده نگر"
 
 
-func articleComponent(
-  id, text, title, img_url, img_alt: string,
-  body: VNode): VNode =
-
+func articleC(artcl: Article): VNode =
   buildHtml tdiv(class = "mt-3"):
-    tdiv(class = "box", id = id):
+    tdiv(class = "box", id = $artcl.id):
       tdiv(class = "header"):
         h2(class = "title"):
-          text title
+          text artcl.title
 
         tdiv(class = "image"):
-          img(src = img_url, alt = img_alt)
+          img(src = artcl.img_url, alt = artcl.img_alt)
 
       tdiv(class = "body"):
-        discard
-        # elem body
+        markdown2html artcl.body
 
-func stageComponent(s: Stage): Vnode =
+func stageC(s: Stage): Vnode =
   buildHtml tdiv(class = "stage"):
     tdiv(class = "top triangle")
     tdiv(class = "inside"):
@@ -158,23 +159,23 @@ func stageComponent(s: Stage): Vnode =
 
 # --- pages
 
-func homePage*(stages: seq[Stage]): VNode =
+func homeP*(stages: seq[Stage]): VNode =
   buildHtml html:
-    headComponent "صفحه اصلی"
+    headC "صفحه اصلی"
     body:
-      headerComponent()
+      headerC()
 
       tdiv(class = "stages"):
         for s in stages:
-          stageComponent s
+          stageC s
 
-      footerComponent()
+      footerC()
 
-func aboutUsPage*(): VNode =
+func aboutUsP*(): VNode =
   buildHtml html:
-    headComponent "درباره ما"
+    headC "درباره ما"
     body:
-      headerComponent()
+      headerC()
 
       tdiv(class = "box automated"):
         text """
@@ -195,13 +196,13 @@ func aboutUsPage*(): VNode =
           هم اکنون این شرکت در دو بخش خدمات و تولیدات افتخار این را دارد که در خدمت پژوهشگران و مشتریان عزیز باشد.
         """
 
-      footer()
+      footerC()
 
-func contactUsPage*(): VNode =
+func contactUsP*(): VNode =
   buildHtml html:
-    headComponent "ارتباط با ما"
+    headC "ارتباط با ما"
     body:
-      headerComponent()
+      headerC()
 
       tdiv(class = "box automated"):
         p(class = "address"):
@@ -236,30 +237,30 @@ func contactUsPage*(): VNode =
           شماره همراه و واتساپ شرکت
           """
 
-      footer()
+      footerC()
 
-# func productsPage*(): VNode =
-#   buildHtml html:
-#     head()
-#     body():
-#       header()
+func productsP*(products: seq[Article]): VNode =
+  buildHtml html:
+    headC "محصولات"
+    body:
+      headerC()
 
-#       tdiv(class = "products article-wrapper"):
-#         for p in products:
-#           article(p)
+      tdiv(class = "products article-wrapper"):
+        for p in products:
+          articleC p
 
-#       footer()
+      footerC()
 
-# func servicesPage*(): VNode =
-#   buildHtml html:
-#     head()
+func servicesP*(services: seq[Article]): VNode =
+  buildHtml html:
+    headC "خدمات"
 
-#     body():
-#       header()
+    body:
+      headerC()
 
-#       tdiv(class = "services article-wrapper"):
-#         for s in services:
-#           article()
+      tdiv(class = "services article-wrapper"):
+        for s in services:
+          articleC s
 
-#       footer()
+      footerC()
 
