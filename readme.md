@@ -16,3 +16,6 @@ I like the npm package `http-server`:
 ```
 http-server .\output\
 ```
+
+## Notes
+[cv idea](http://www.designstub.com/demos/onepageresume/)
