@@ -5,9 +5,7 @@ personal_information:
     first: Morteza
     last: Abkar
 
-  born: 
-    date: [1983, 7, 7]
-    location: [Iran, Kashan]
+  born: 7th July 1983, Kashan, Iran
 
   nationality: Iranian
   family_status: married
@@ -40,23 +38,13 @@ education:
 professional_experiences:
   - title: Assistant Professor in Genetics Department
     span: [2020, now]
-    in: 
-      name: Shahid Ashrafi Esfahani University
-      sub:
-        - Department of Genetics
-        - Faculty of Biological Sciences and Technology
-        - Shahid Ashrafi Esfahani University
-        
-      location: [Iran, Isfahan]
-      pobox: 8179849999
-      tel: +98-31-36502820
-      fax: +98-31-36502825
+    in: |
+      Department of Genetics, Faculty of Biological Sciences and Technology, Shahid Ashrafi Esfahani University, Isfahan, Iran. P.O. Box: 8179849999. Tel: +98-31-36502820. Fax: +98-31-36502825
 
   - title: Postdoc researcher
     span: [June 2017, June 2018]
     thesis: Production of chitosan based nanovaccine containing Brucella melitensis Omp31 and investigation of its immunogenicity in mouse model
-    in: 
-      name: Shiraz University of medical sciences 
+    in: Shiraz University of medical sciences 
 
 research_interests:
   - Detection of Different Pathogens by Molecular Methods
@@ -75,6 +63,7 @@ publications:
     
     title: Design of a chimeric DNA Vaccine against Brucella spp. Minerva 
     footnote: Biotecnologica 2014; 26:223-233
+    download: minerva.PDF
 
   - people:
     - Morteza Abkar
@@ -89,6 +78,8 @@ publications:
       
     footnote: |
       APMIS 2015 Aug; 123(8): 667-675
+
+    download: Abkar_et_al-2015-APMIS.pdf
 
   - people:
     - Morteza Abkar
@@ -108,6 +99,8 @@ publications:
     footnote: |
       Vet Res Comm. 2015 Dec; 39(4):217-28
 
+    download: Omp19.pdf
+
   - people:
     - Ahmad Poursadegh Zonouzi
     - Saeid Ghorbian
@@ -120,6 +113,8 @@ publications:
       
     footnote: J Neurol Sci 345. 2014. 220-223
 
+    download: azadi.PDF
+
   - people:
     - Saeid Ghorbian
     - Morteza Abkar
@@ -127,6 +122,8 @@ publications:
   
     title: Methodology to Understand How Perforin Assembles on Membranes
     footnote: Scandinavian journal of immunology. 80. 2014. 73-74
+
+    download: Methodology to Understand How Perforin Assembles.pdf
 
   - people:
     - Morteza Abkar
@@ -153,6 +150,7 @@ publications:
       Recombinant plasmid KMP-11 gene Leishmania major (pcKMP-11): production, characterization and sequencing
 
     footnote: Minerva Biotecnologica 2014; September; 26 (3):175-182
+    download: minerva2.PDF
 
   - people:
     - Ali Akbar Poursadegh Zonouzi
@@ -161,6 +159,8 @@ publications:
       
     title: Recent Applications of DNA Vaccines in Cancer Therapy
     footnote: Molecular medicine journal. 2016. Vol 1, Num 3
+
+    download: Cancer Therapy.PDF
 
   - people: 
     - Morteza Abkar
@@ -172,6 +172,7 @@ publications:
 
     footnote:
       Molecular and biochemical diagnosis journal. Vol.2, No.1 (2016), 65-78.
+    download: Refolding.PDF
 
   - people:
     - Salman Bagheri
@@ -188,6 +189,8 @@ publications:
     footnote:
       Artificial Cells, Nanomedicine, and Biotechnology, 2018.
 
+    download: Gold Nanoparticles.pdf
+
   - people:
     - Morteza Abkar
     - Mahdi Fasihi Ramandi
@@ -197,6 +200,8 @@ publications:
     title: Oral immunization of mice with Omp31 loaded N-trimethyl Chitosan nanoparticles induces high protection against B. melitensis infection
     footnote: International journal of nanomedicine. 2017:12 8769–8778.
 
+    download: Omp31.pdf
+
   - people:
     - Morteza Abkar
     - Mahdi Fasihi Ramandi
@@ -205,6 +210,7 @@ publications:
   
     title: Intraperitoneal immunization with Urease loaded N-trimethyl Chitosan nanoparticles elicits high protection against B. melitensis and B. abortus infections
     footnote: Immunology Letters. 199 (2018) 53–60.
+    download: Urease nano.pdf
 
   - people:
     - Reza Heidari
@@ -217,6 +223,8 @@ publications:
     footnote:
       Biosensors and Bioelectronics. Volume 126, 1 February 2019, Pages 7-14.
 
+    download: Cds NPs 2019.pdf
+
   - people:
     - Roksana Sookhaklari
     - Bita Geramizadeh
@@ -225,6 +233,7 @@ publications:
   
     title: The neuroprotective effect of BSA-based nanocurcumin against 6-OHDA-induced cell death in SH-SY5Y cells
     footnote: Avicenna Journal of Phytomedicine. 2018. In press
+    download: Roksana Sookhaklari 2019.pdf
 
   - people:
     - Maryam Moosavi
@@ -235,6 +244,7 @@ publications:
   
     title: Curcumin Loaded BSA Nanoparticles Protects More Efficiently Than Natural Curcumin Against Scopolamine￾Induced Memory Retrieval Deficit
     footnote: Basic and Clinical Neuroscience. 2018.
+    download: Mousavi.pdf
 
   - people:
     - Morteza Abkar
@@ -243,6 +253,8 @@ publications:
   
     title: A comparison between adjuvant and delivering functions of calcium phosphate, aluminum hydroxide and chitosan nanoparticles, using a model protein of brucella melitensis Omp31
     footnote: Immunology Letters. Volume 207, May 2019, Pages 28-35.
+
+    download: Omp31 nano 2019.pdf
 
   - people: 
     - Mahshid Samie Ghahfarokhi
@@ -346,9 +358,9 @@ posters:
     - Zamanzadeh Z
     - Rezaei H
     - Tabatabaeian M
-    - Abkar M. Association between 
+    - Abkar M 
   
-    title: DROSHA rs642321 Polymorphism and Breast Cancer in Iranian Women. International conference on human genetics and genomics. Poster
+    title: Association between DROSHA rs642321 Polymorphism and Breast Cancer in Iranian Women. International conference on human genetics and genomics. Poster
     footnote: Yazd. December 2021.
 
   - people: 
@@ -437,13 +449,5 @@ skills:
   - ELISA
   - MTT assay
 
-reference:
-  name: Prof. Abbas Sahebghadam Lotfi
-  email: lotfi_ab@modares.ac.ir
-  sub: 
-    - Department of Clinical Biochemistry
-    - Faculty of Medicine
-    - Tarbiat Modares University
-  
-  pobox: 14155-6343
-  location: [Iran, Tehran]
+reference: |
+  Prof. Abbas Sahebghadam Lotfi; Department of Clinical Biochemistry, Faculty of Medicine, Tarbiat Modares University, P.O. Box: 14155-6343, Tehran, Iran. lotfi_ab@modares.ac.ir.

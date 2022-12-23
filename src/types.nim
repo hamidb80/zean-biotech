@@ -24,28 +24,27 @@ type
     patents*: seq[Patent]
     teaching_experience*: TeachingXP
     skills*: seq[string]
-    reference*: Address
+    reference*: string
 
   Activity* {.sparse.} = object
     people*: seq[string]
     title*, footnote*: string
-    tags* {.defaultVal: @[].}: seq[string]
-    location*: Option[LocationArray]
+    link*, download*: Option[string]
 
-  Address* {.sparse.} = object
-    name*: string
-    sub* {.defaultVal: @[].}: seq[string]
-    location*: Option[LocationArray]
-    pobox*: Option[string]
-    tel*: Option[string]
-    fax*: Option[string]
-    email*: Option[string]
+  # Address* {.sparse.} = object
+  #   name*: string
+  #   sub* {.defaultVal: @[].}: seq[string]
+  #   location*: Option[LocationArray]
+  #   pobox*: Option[string]
+  #   tel*: Option[string]
+  #   fax*: Option[string]
+  #   email*: Option[string]
 
   ProfessionalXP* {.sparse.} = object
     title*: string
     thesis*: Option[string]
     span*: TimeSpanArray
-    `in`*: Address
+    `in`*: string
 
   Education* {.sparse.} = object
     degree*: string
@@ -66,15 +65,11 @@ type
   PV* = object
     image*: string
     name*: Name
-    born*: Born
+    born*: string
     current_job*: string
     nationality*: string
     family_status*: FamilyStatus
     contact*: Contact
-
-  Born* = object
-    date*: DateArray
-    location*: LocationArray
 
   Patent* = object
     center*: string

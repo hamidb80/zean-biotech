@@ -300,11 +300,6 @@ func servicesP*(services: seq[Article]): VNode =
 
       footerC()
 
-
-# func add(v: var Vnode, ss: openArray[VNode]) =
-#   for s in ss:
-#     v.add s
-
 func edtime(sp: TimeSpanArray): VNode =
   buildHtml tdiv():
     hr()
@@ -318,7 +313,6 @@ func edtime(sp: TimeSpanArray): VNode =
 
         span(class = "stop"):
           text sp[stop]
-
 
 func my1: VNode =
   buildHtml tdiv(class = "my1")
@@ -368,20 +362,34 @@ func patentC(p: Patent): VNode =
     bold:
       text $p.id
 
+proc iconC(name: string): VNode =
+  buildHtml span(class="icon " & name)
 
-func `$`(l: LocationArray): string = 
-  l[city] & ", " & l[country]
+proc downloadBtn: VNode =
+  buildHtml a(class = "icon-wrapper download"):
+    iconC "download"
 
-func activityC(ac: Activity, you: seq[string]): VNode =
+proc activityC(ac: Activity, you: seq[string]): VNode =
+  let c = 
+    buildHtml span:  
+      bold: text ac.title
+
   buildHtml tdiv(class = "pub"):
     p(class = "title"):
-      bold: text ac.title
+      if issome ac.download:
+        downloadBtn()
+
+      if isSome ac.download:
+        a(href = "/static/files/" & ac.download.get): c
+      else:
+        c
+
       text " - "
       italic: text ac.footnote
 
     p:
       for p in ac.people:
-        let c = 
+        let c =
           if p in you: " me"
           else: ""
 
@@ -389,9 +397,7 @@ func activityC(ac: Activity, you: seq[string]): VNode =
           p:
             text p
 
-
-
-func cvPage*(cv: CV): VNode =
+proc cvPage*(cv: CV): VNode =
   let
     pfp = cv.personal_information
 
@@ -438,31 +444,27 @@ func cvPage*(cv: CV): VNode =
           tdiv(class = "body"):
             ul:
               li:
-                text "Birthday:"
-                text $pfp.born.date
-                text ","
-                text $pfp.born.location
+                bold: text "Birthday: "
+                text pfp.born
 
               li:
-                text "Nationality:"
+                bold: text "Nationality: "
                 text pfp.nationality
 
               li:
-                text "family status:"
+                bold: text "family status: "
                 text $pfp.family_status
 
-
-            ul(class = "social"):
               li:
-                text "phone:"
+                bold: text "phone: "
                 text pfp.contact.phone
 
               li:
-                text "email:"
+                bold: text "email: "
                 text pfp.contact.email
 
               li:
-                text "linkedIn:"
+                bold: text "linkedIn: "
                 text pfp.contact.linkedIn
 
         main:
@@ -499,13 +501,13 @@ func cvPage*(cv: CV): VNode =
               activityC(p, you)
 
           h2: text "Patents"
-          tdiv(class = " content"):
+          tdiv(class = "content"):
             ul:
               for p in cv.patents:
                 patentC p
 
           h2: text "Teaching Experience"
-          tdiv(class = " content"):
+          tdiv(class = "content"):
             h3: text "University Courses"
             ul:
               for uc in cv.teaching_experience.university_courses:
@@ -517,12 +519,13 @@ func cvPage*(cv: CV): VNode =
                 li: text wk
 
           h2: text "Skills"
-          tdiv(class = " content"):
+          tdiv(class = "content"):
             ul:
               for sk in cv.skills:
                 li:
                   text sk
 
           h2: text "Reference"
-          tdiv(class = " content"):
-            discard
+          tdiv(class = "content"):
+            p:
+              text cv.reference

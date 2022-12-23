@@ -32,6 +32,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     padding: 10px 40px;
 
     .profile {
@@ -68,20 +69,55 @@ body {
       }
     }
 
+
     .body {
       padding-left: 32px;
+      color: white;
 
-      .social {
+      ul {
         list-style: none;
-        display: flex;
-        flex-direction: column;
-        color: white;
+      }
 
-        li {
-          margin: 6px 0;
-        }
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+
+      li {
+        margin: 2px 0;
       }
     }
+  }
+
+  .title {
+    a {
+      text-decoration: none;
+      color: @dark;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .icon-wrapper {
+    margin: 0px 2px;
+
+    .icon {
+      width: 1rem;
+      height: 1rem;
+      background-repeat: no-repeat;
+      display: inline-block;
+    }
+
+    &.download {
+      border-color: red;
+      color: red;
+
+      .icon {
+        background-image: url("/static/pics/icons/download.svg");
+      }
+    }
+
   }
 
   main {
@@ -90,6 +126,10 @@ body {
     background-color: white;
 
     h2 {
+      &::before {
+        content: "# ";
+      }
+
       color: @dark;
       margin-top: 40px;
       margin-bottom: 6px;
