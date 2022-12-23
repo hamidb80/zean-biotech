@@ -300,7 +300,39 @@ func servicesP*(services: seq[Article]): VNode =
 
       footerC()
 
-
 func cvPage*(cv: CV): VNode =
-  buildHtml tdiv:
-    discard
+  let 
+    name = 
+      cv.personal_information.name.first & " " &
+      cv.personal_information.name.last
+    
+    pageTitle = name & " CV"
+
+  buildHtml html:
+    head:
+      meta(charset = "UTF-8")
+      meta(http-equiv = "X-UA-Compatible", content = "IE=edge")
+      meta(name = "viewport", content = "width=device-width, initial-scale=1.0")
+      meta(name = "description", content = pageTitle)
+      link(rel = "stylesheet", href = "/static/dist/app.css")
+      title:
+        text pageTitle
+
+    body:
+      tdiv(class="cv-wrapper"):
+        aside:
+          img
+          name
+
+        tdiv:
+          personal_information
+          education
+          professional_experiences
+          research_interests
+          publications
+          talks
+          posters
+          patents
+          teaching_experience
+          skills
+          reference

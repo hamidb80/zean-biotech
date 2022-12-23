@@ -32,9 +32,7 @@ when isMainModule:
 
   let 
     cv = loadYaml[CV]("./data/cv.yaml")
-    # p = dest/cv.personal_information.name.toPath
+    p = dest/cv.personal_information.name.toPath
 
-  echo cv.personal_information.contact.phone
-
-  # createDir p
-  # writeFile p/"index.html", $cvPage(cv)
+  createDir p
+  writeFile p/"index.html", $cvPage(cv)
