@@ -1,4 +1,5 @@
 import std/[options, strutils]
+import yaml/annotations
 
 type
   Stage* = object
@@ -17,15 +18,15 @@ type
   CV* = object
     personal_information*: PV
     education*: seq[Education]
-    professional_experiences*: seq[ProfessionalXP]
-    research_interests*: seq[string]
-    publications*: seq[string]
-    talks*: seq[Talk]
-    posters*: seq[Poster]
-    patents*: seq[Patent]
-    teaching_experience*: TeachingXP
-    skills*: seq[string]
-    reference*: Address
+    # professional_experiences*: seq[ProfessionalXP]
+    # research_interests*: seq[string]
+    # publications*: seq[string]
+    # talks*: seq[Talk]
+    # posters*: seq[Poster]
+    # patents*: seq[Patent]
+    # teaching_experience*: TeachingXP
+    # skills*: seq[string]
+    # reference*: Address
 
   Talk* = object
     lecturers*: seq[string]
@@ -37,7 +38,7 @@ type
     title*, footnote*, date*: string
     location*: LocationArray
 
-  Address* = object
+  Address* {.sparse.} = object
     name*: string
     sub*: Option[seq[string]]
     location*: Option[LocationArray]
@@ -47,13 +48,8 @@ type
     title*: string
     span*: TimeSpanArray
     `in`*: Address
-
-  Span* = enum
-    start, stop
-
-  TimeSpanArray* = array[Span, string]
-
-  Education* = object
+  
+  Education* {.sparse.} = object
     degree*: string
     field*: string
     span*: TimeSpanArray
@@ -80,12 +76,17 @@ type
     center*: string
     id*: int
 
+  SpanPart* = enum
+    start, stop
+
   DateUnit* = enum
     year, month, day
 
   CivilUnit* = enum
     country, city
 
+
+  TimeSpanArray* = array[SpanPart, int]
   DateArray* = array[DateUnit, int]
   LocationArray* = array[CivilUnit, string]
 
