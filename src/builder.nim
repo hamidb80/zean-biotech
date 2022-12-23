@@ -23,6 +23,7 @@ when isMainModule:
   copyDir "./static", dest/"static"
 
   discard execShellCmd "lessc ./styles/app.less " & dest/"static/dist/app.css"
+  discard execShellCmd "lessc ./styles/cv.less " & dest/"static/dist/cv.css"
 
   writeFile dest/"index.html", $homeP(site.stages)
   writeFile dest/"about-us.html", $aboutUsP()

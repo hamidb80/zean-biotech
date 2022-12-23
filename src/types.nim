@@ -79,9 +79,14 @@ type
     image*: string
     name*: Name
     born*: Born
+    current_job*: string
     nationality*: string
     family_status*: FamilyStatus
     contact*: Contact
+
+  Born* = object
+    date*: DateArray
+    location*: LocationArray
 
   Patent* = object
     center*: string
@@ -103,10 +108,6 @@ type
 
   TeachingXP* = object
     university_courses*, workshops*: seq[string]
-
-  Born* = object
-    `when`*: DateArray
-    where*: LocationArray
 
 
 func toPath*(n: Name): string = 

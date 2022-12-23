@@ -1,16 +1,18 @@
 personal_information:
-  image: /static/pics/pfp.png
+  image: /static/pics/pfp.jpg
 
   name: 
     first: Morteza
     last: Abkar
 
   born: 
-    when: [1983, 7, 7]
-    where: [Iran, Kashan]
+    date: [1983, 7, 7]
+    location: [Iran, Kashan]
 
   nationality: Iranian
   family_status: married
+
+  current_job: Ph.D, Assistant Professor
 
   contact:
     phone: +989362045641

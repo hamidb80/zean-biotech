@@ -1,4 +1,4 @@
-import std/[strformat, sequtils, strutils]
+import std/[strformat, sequtils, strutils, options]
 import karax/[karaxdsl, vdom], marggers, marggers/element
 import types
 
@@ -300,12 +300,95 @@ func servicesP*(services: seq[Article]): VNode =
 
       footerC()
 
+
+# func add(v: var Vnode, ss: openArray[VNode]) =
+#   for s in ss:
+#     v.add s
+
+func edtime(sp: TimeSpanArray): VNode =
+  buildHtml tdiv():
+    hr()
+    tdiv(class = "time-span"):
+      tdiv(class = "line"):
+        span(class = "start"):
+          text sp[start]
+
+        span(class = "space"):
+          text " - "
+
+        span(class = "stop"):
+          text sp[stop]
+
+
+func my1: VNode =
+  buildHtml tdiv(class = "my1")
+
+func educationC*(ed: Education): VNode =
+  buildHtml tdiv(class = "education"):
+    edtime ed.span
+    p:
+      bold:
+        text ed.degree
+        text " "
+        text ed.field
+
+      text " - "
+      italic:
+        text ed.`in`
+
+    if issome ed.thesis:
+      my1()
+      p:
+        bold:
+          text "Thesis: "
+        text ed.thesis.get
+
+func profexC*(px: ProfessionalXP): VNode =
+  buildHtml tdiv(class = "education"):
+    edtime px.span
+    p:
+      bold:
+        text px.title
+
+      text " - "
+      italic:
+        text $px.`in`
+
+    if issome px.thesis:
+      my1()
+      p:
+        bold:
+          text "Thesis: "
+        text px.thesis.get
+
+func patentC(p: Patent): VNode =
+  buildHtml li:
+    text p.center
+    text " - patent No: "
+    bold:
+      text $p.id
+
+func pubC(p: Publication): VNode =
+  buildHtml tdiv:
+    discard
+
+func talkC(t: Talk): VNode =
+  buildHtml tdiv:
+    discard
+
+func posterC(p: Poster): VNode =
+  buildHtml tdiv:
+    discard
+
+
 func cvPage*(cv: CV): VNode =
-  let 
-    name = 
-      cv.personal_information.name.first & " " &
-      cv.personal_information.name.last
-    
+  let
+    pfp = cv.personal_information
+
+    name =
+      pfp.name.first & " " &
+      pfp.name.last
+
     pageTitle = name & " CV"
 
   buildHtml html:
@@ -314,48 +397,117 @@ func cvPage*(cv: CV): VNode =
       meta(http-equiv = "X-UA-Compatible", content = "IE=edge")
       meta(name = "viewport", content = "width=device-width, initial-scale=1.0")
       meta(name = "description", content = pageTitle)
-      link(rel = "stylesheet", href = "/static/dist/app.css")
+      link(rel = "preconnect", href = "https://fonts.googleapis.com")
+      link(rel = "preconnect", href = "https://fonts.gstatic.com",
+          crossorigin = "true")
+      link(href = "https://fonts.googleapis.com/css2?family=Karla:wght@200;300&display=swap",
+          rel = "stylesheet")
+      link(rel = "stylesheet", href = "/static/dist/cv.css")
       title:
         text pageTitle
 
     body:
-      tdiv(class="cv-wrapper"):
+      tdiv(class = "cv-wrapper"):
         aside:
-          cv.img
-          name
+          tdiv(class = "profile"):
+            tdiv(class = "pfp"):
+              img(src = pfp.image)
+
+            tdiv(class = "info"):
+              h1(class = "name"):
+                text name
+
+              tdiv(class = "job"):
+                text pfp.current_job
+
+          tdiv(class = "body"):
+            ul:
+              li:
+                text "Birthday:"
+                text $pfp.born.date
+                text ","
+                text $pfp.born.location
+
+              li:
+                text "Nationality:"
+                text pfp.nationality
+
+              li:
+                text "family status:"
+                text $pfp.family_status
+
+
+            ul(class = "social"):
+              li:
+                text "phone:"
+                text pfp.contact.phone
+
+              li:
+                text "email:"
+                text pfp.contact.email
+
+              li:
+                text "linkedIn:"
+                text pfp.contact.linkedIn
 
         main:
-          cv.personal_information
-          
-          for ed in cv.education:
-            ed
+          h2: text "Education"
+          tdiv(class = "content"):
+            for ed in cv.education:
+              educationC ed
 
-          for ex in cv.professional_experiences:
-            ex
-          
-          for ri in cv.research_interests:
-            ri
+          h2: text "Professional Experiences"
+          tdiv(class = "content"):
+            for ex in cv.professional_experiences:
+              profexC ex
 
-          for pub in cv.publications:
-            pub
+          h2: text "Research Interests"
+          tdiv(class = "content"):
+            ul:
+              for ri in cv.research_interests:
+                li:
+                  text ri
 
-          for tk in cv.talks:
-            tk
-          
-          for p in cv.posters:
-            p
+          h2: text "Publications"
+          tdiv(class = "content"):
+            for p in cv.publications:
+              pubC p
 
-          for p in patents:
-            p
+          h2: text "Talks"
+          tdiv(class = "content"):
+            for t in cv.talks:
+              talkC t
 
-          tdiv:
-            for uc in cv.teaching_experience.university_courses:
-              uc
+          h2: text "Posters"
+          tdiv(class = "content"):
+            for p in cv.posters:
+              posterC p
 
-            for wk in cv.teaching_experience.workshops:
-              wk
-          
-          for sk in cv.skills:
-            sk
-          
-          reference
+          h2: text "Patents"
+          tdiv(class = " content"):
+            ul:
+              for p in cv.patents:
+                patentC p
+
+          h2: text "Teaching Experience"
+          tdiv(class = " content"):
+            h3: text "University Courses"
+            ul:
+              for uc in cv.teaching_experience.university_courses:
+                li: text uc
+
+            h3: text "Workshops"
+            ul:
+              for wk in cv.teaching_experience.workshops:
+                li: text wk
+
+          h2: text "Skills"
+          tdiv(class = " content"):
+            ul:
+              for sk in cv.skills:
+                li:
+                  text sk
+
+          h2: text "Reference"
+          tdiv(class = " content"):
+            discard

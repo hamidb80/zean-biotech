@@ -14,6 +14,9 @@ requires "marggers >= 0.3.3"
 requires "karax >= 1.2.2"
 # "less": "^4.1.1"
 
-task go, "":
+task fast, "for dev":
+  exec "nim r src/builder.nim"
+
+task go, "natural":
   exec "nimble build"
   exec "./builder.exe"
