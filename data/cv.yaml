@@ -1,26 +1,21 @@
-Personal Information:
-  Name: 
+personal_information:
+  name: 
     first: Morteza
     last: Abkar
 
-  Born: 
-    when: 
-      year: 1983
-      month: 7
-      day: 7
+  born: 
+    when: [1983,7,7]
+    where: [Iran, Kashan]
 
-    where: 
-      country: Iran
-      city: Kashan
+  nationality: Iranian
+  family_status: married
 
-  Nationality: Iranian
-  Family Status: Married
-  
-  Phone: +989362045641
-  E-mail: mortezaabkar@gmail.com
-  linkedin: https://www.linkedin.com/in/morteza-abkar-5444b747/
+  contact:
+    phone: +989362045641
+    email: mortezaabkar@gmail.com
+    linkedin: https://www.linkedin.com/in/morteza-abkar-5444b747/
 
-Education:
+education:
   - degree: Ph.D.
     of: Molecular Genetics
     span: [2010, 2015]
@@ -38,28 +33,34 @@ Education:
     span: [2002, 2006]
     in: University of Esfahan
 
-Professional Experiences:
+professional_experiences:
   - title: Assistant Professor in Genetics Department
     span: [2020, -1] # -1 means now
     in: 
       name: Shahid Ashrafi Esfahani University
-      Address: Department of Genetics, Faculty of Biological Sciences and Technology, Shahid Ashrafi Esfahani University, Isfahan, Iran. 
-      P.O. Box: 8179849999
-      Tel: +98-31-36502820
-      Fax: +98-31-36502825
+      sub: 
+        - Department of Genetics
+        - Faculty of Biological Sciences and Technology
+        - Shahid Ashrafi Esfahani University
+        
+      location: [Iran, Isfahan]
+      pobox: 8179849999
+      tel: +98-31-36502820
+      fax: +98-31-36502825
 
   - title: Postdoc researcher
     span: [June 2017, June 2018]
-    in: Shiraz University of medical sciences 
-    Thesis Title: Production of chitosan based nanovaccine containing Brucella melitensis Omp31 and investigation of its immunogenicity in mouse model.
+    thesis: Production of chitosan based nanovaccine containing Brucella melitensis Omp31 and investigation of its immunogenicity in mouse model.
+    in: 
+      name: Shiraz University of medical sciences 
 
-Research Interests:
+research_interests:
   - Detection of Different Pathogens by Molecular Methods
   - Production of Recombinant Proteins in Different Host Cells
   - Vaccine Design by Bioinformatics Tools
   - Function Evaluation of Different Vaccine Delivery Systems
 
-Publications:
+publications:
   - authors:
     - Morteza Abkar
     - Abbas Sahebghadam Lotfi
@@ -70,8 +71,9 @@ Publications:
     
     title: 
       Design of a chimeric DNA Vaccine against Brucella spp. 
-
-    Minerva Biotecnologica 2014; 26:223-233. 
+    
+    footnote: 
+      Minerva Biotecnologica 2014; 26:223-233. 
 
   - authors:
     - Morteza Abkar
@@ -83,6 +85,8 @@ Publications:
 
     title: 
       Subcutaneous immunization with a novel immunogenic candidate (urease) confers protection against Brucella abortus and Brucella melitensis infections. 
+
+    footnote: |
       APMIS 2015 Aug; 123(8): 667-675. 
 
   - authors:
@@ -97,8 +101,10 @@ Publications:
     - Mehdi Kamali
     - Hamid Koushki
 
-    title: 
+    title: |
       Survey of Omp19 immunogenicity against Brucella abortus and Brucella melitensis: Influence of nanoparticulation and route of administration versus traditional immunization. 
+
+    footnote:
       Vet Res Comm. 2015 Dec; 39(4):217-28. 
 
   - authors:
@@ -108,8 +114,11 @@ Publications:
     - Ali Akbar Poursadegh Zonouzi
     - Ali Azadi
 
-    Mitochondrial Complex I Gene Variations; as a Potential Genetic Risk Factor in Pathogenesis of Multiple Sclerosis. 
-    J Neurol Sci 345. 2014. 220-223. 
+    title:
+      Mitochondrial Complex I Gene Variations; as a Potential Genetic Risk Factor in Pathogenesis of Multiple Sclerosis. 
+
+    footnote:
+      J Neurol Sci 345. 2014. 220-223. 
 
   - authors:
     - Saeid Ghorbian
@@ -125,6 +134,8 @@ Publications:
     
     title:
       Asses ability of mutant variety of ribosomal protein L3 (RPL3 W258C/H259Y) in resistance to mycotoxin of Fusarium graminearum by using Saccharomyces cervisiae. 
+
+    footnote:
       Crop Biotech. Persian. 13-23. 
 
   - authors:
@@ -140,8 +151,10 @@ Publications:
     - Jafari A. A
     - Abkar M
     
-    title:
+    title: |
       Recombinant plasmid KMP-11 gene Leishmania major (pcKMP-11): production characterization and sequencing. 
+
+    footnote:
       Minerva Biotecnologica 2014; September; 26 (3):175-182. 
 
   - authors:
@@ -151,6 +164,8 @@ Publications:
     
     title:
       Recent Applications of DNA Vaccines in Cancer Therapy. 
+
+    footnote:
       Molecular medicine journal. 2016. Vol 1 Num 3. 
 
   - authors:
@@ -161,6 +176,8 @@ Publications:
     
     title:
       Optimization of a method for refolding of bacterial recombinant proteins. 
+
+    footnote:
       Molecular and biochemical diagnosis journal. Vol.2 No.1 (2016) 65-78.
 
   - authors:
@@ -175,6 +192,8 @@ Publications:
     
     title:
       Using gold nanoparticles in diagnosis and treatment of melanoma cancer. 
+
+    footnote:
       Artificial Cells Nanomedicine and Biotechnology 2018.
 
   - authors:
@@ -185,6 +204,8 @@ Publications:
     
     title:
       Oral immunization of mice with Omp31 loaded N-trimethyl Chitosan nanoparticles induces high protection against B. melitensis infection. 
+
+    footnote:
       International journal of nanomedicine. 2017:12 8769–8778.
 
   - authors:
@@ -195,6 +216,8 @@ Publications:
 
     title: 
       Intraperitoneal immunization with Urease loaded N-trimethyl Chitosan nanoparticles elicits high protection against B. melitensis and B. abortus infections. 
+
+    footnote:
       Immunology Letters. 199 (2018) 53–60.
 
   - authors:
@@ -202,8 +225,10 @@ Publications:
     - Jamal Rashidiani
     - Morteza Abkar
     
-    title:
+    title: |
       CdS nanocrystals/graphene oxide-AuNPs based electrochemiluminescence immunosensor in sensitive quantification of a cancer biomarker: p53. 
+
+    footnote:
       Biosensors and Bioelectronics. Volume 126
       1 February 2019
       Pages 7-14.
@@ -216,6 +241,8 @@ Publications:
     
     title:
       The neuroprotective effect of BSA-based nanocurcumin against 6-OHDA-induced cell death in SH-SY5Y cells. 
+
+    footnote:
       Avicenna Journal of Phytomedicine. 2018. In press.
 
   - authors:
@@ -227,6 +254,8 @@ Publications:
 
     title:
       Curcumin Loaded BSA Nanoparticles Protects More Efficiently Than Natural Curcumin Against Scopolamine-Induced Memory Retrieval Deficit. 
+
+    footnote:
       Basic and Clinical Neuroscience. 2018.
 
   - authors:
@@ -236,6 +265,8 @@ Publications:
     
     title:
       A comparison between adjuvant and delivering functions of calcium phosphate aluminum hydroxide and chitosan nanoparticles using a model protein of brucella melitensis Omp31. 
+
+    footnote:
       Immunology Letters. Volume 207
       May 2019
       Pages 28-35.
@@ -246,243 +277,264 @@ Publications:
     - Zahra Zamanzadeh
     - Morteza Abkar
 
+    year: 2022
+
     title:    
       Association of hsa-miR5571-5p expression with clinicopathological factors and identification of its hub target genes and key pathway in breast cancer. 
-      Iranian Journal of Public Health. 
-      2022. 
-      Under print. 
 
-Conference Presentations:
-  Talks:
-    - lecturers:
-      - Abkar M
-      - Sahebghadam Lotfi A
-      - Amani J
-      - Eskandari K
-      - Fasihi M
-      - Nikbakht Brujeni G
-      - Alamian S
-      - Kamali M
+    footnote:
+      Iranian Journal of Public Health. [Under print]
+    
+Talks:
+  - lecturers:
+    - Abkar M
+    - Sahebghadam Lotfi A
+    - Amani J
+    - Eskandari K
+    - Fasihi M
+    - Nikbakht Brujeni G
+    - Alamian S
+    - Kamali M
 
-      title:
-        Brucella abortus Outer Membrane Protein 19 Loaded N-trimethyl Chitosan Confers Protection against B. abortus B. melitensis and B. suis in Mice. 
-        
+    title:
+      Brucella abortus Outer Membrane Protein 19 Loaded N-trimethyl Chitosan Confers Protection against B. abortus B. melitensis and B. suis in Mice. 
+
+    footnote:
       12th international congress of immunology & allergy.
-      2014
-      Tehran
-      Iran
     
-    - lecturers:
-      - Abkar M
-      - SahebghadamLotfi A
-      - Amani J
-      - Eskandari K
-      - Fasihi M
-      - Nikbakht Brujeni G
-      - Kamali M
-      - Koushki H
+    year: 2014
+    in: [Iran, Tehran]
   
-      title:
-        The Oral Chimeric Vaccine Candidate Omp19-Omp31 Induces Protection against Different Brucella spp Challenges by Inducing IL-17 Immune Response
-      
-      12th international congress of immunology & allergy
-      2014
-      Tehran
-      Iran
-      
-    - lecturers:
-      - Abkar M
-      - Poursadegh Zonouzi A
-      - Fasihi Ramandi M
-      - Sahebghadam Lotfi A
-      
-      title:
-        Influence of Administration Route on Omp31 immunogenicity against Brucella melitensis
-      
+  - lecturers:
+    - Abkar M
+    - SahebghadamLotfi A
+    - Amani J
+    - Eskandari K
+    - Fasihi M
+    - Nikbakht Brujeni G
+    - Kamali M
+    - Koushki H
+
+    title:
+      The Oral Chimeric Vaccine Candidate Omp19-Omp31 Induces Protection against Different Brucella spp Challenges by Inducing IL-17 Immune Response
+    
+    12th international congress of immunology & allergy
+    2014
+
+    in: [Iran, Tehran]
+    
+  - lecturers:
+    - Abkar M
+    - Poursadegh Zonouzi A
+    - Fasihi Ramandi M
+    - Sahebghadam Lotfi A
+    
+    title:
+      Influence of Administration Route on Omp31 immunogenicity against Brucella melitensis
+    
+    footnote:
       13th international congress of immunology & allergy
       2016
-      Tabriz
-      Iran
     
-    - lecturers:
-      - Abkar M
-      - Nikbakht Brujeni G
-      - Poursadegh Zonouzi A
-      - Fasihi Ramandi M
-      - Sahebghadam Lotfi A
+    in: [Iran, Tabriz]
+  
+  - lecturers:
+    - Abkar M
+    - Nikbakht Brujeni G
+    - Poursadegh Zonouzi A
+    - Fasihi Ramandi M
+    - Sahebghadam Lotfi A
 
-      title: 
-        Examination of Urease immunogenicity against Brucella abortus and Brucella melitensis: influence of nanoparticulation versus traditional immunization. 
-      
-      13th international congress of immunology & allergy
-      2016
-      Tabriz
-      Iran
-  
-    - lecturers:
-      - Abkar M
-      - Alamian S
-      - Sattarahmady N
-      
-      title: 
-        Gelatin nanoparticle based delivery of Urease and Omp31 in mice protects against Brucella melitensis 16M infection. 
-      
-      14th international congress of immunology & allergy
-      2018
-      Tehran
-      Iran
-  
-    - lecturers:
-      - Abkar M
-      - Alamian S
-      - Sattarahmady N
-      
-      title: 
-        Subcutaneous vaccination with aluminium hydroxide/Omp31 and chitosan/Omp31 nanoparticles induces protection against Brucella melitensis infection in BALB/c mice. 
-      
-      14th international congress of immunology & allergy
-      2018
-      Tehran
-      Iran
-  
-    - lecturers:
-      - Abkar M
-      - Alamian S
-      - Fasihi Ramandi M
-      - Sahebghadam Lotfi A
-      
-      title:
-        Oral Administration of Mice with Chimeric Protein Containing Urease Omp31 and Omp19 Induces High Protection against Brucella melitensis and Brucella abortus Infections
-      
-      14th international congress of immunology & allergy
-      2018
-      Tehran
-      Iran
+    title: 
+      Examination of Urease immunogenicity against Brucella abortus and Brucella melitensis: influence of nanoparticulation versus traditional immunization. 
+    
+    13th international congress of immunology & allergy
+    2016
+    
+    in: [Iran, Tabriz]
 
-  Posters:
-    - authors:
-      - Abkar M
-      - Sanjarian F
-      
-      title:
-        In silico analysis of yeast acetyl transferase (AYT1)
-      
+  - lecturers:
+    - Abkar M
+    - Alamian S
+    - Sattarahmady N
+    
+    title: 
+      Gelatin nanoparticle based delivery of Urease and Omp31 in mice protects against Brucella melitensis 16M infection. 
+    
+    footnote:
+      14th international congress of immunology & allergy
+      2018
+    
+    in: [Iran, Tehran]
+
+  - lecturers:
+    - Abkar M
+    - Alamian S
+    - Sattarahmady N
+    
+    title: 
+      Subcutaneous vaccination with aluminium hydroxide/Omp31 and chitosan/Omp31 nanoparticles induces protection against Brucella melitensis infection in BALB/c mice. 
+    
+    footnote:
+      14th international congress of immunology & allergy
+      2018
+    
+    in: [Iran, Tehran]
+
+  - lecturers:
+    - Abkar M
+    - Alamian S
+    - Fasihi Ramandi M
+    - Sahebghadam Lotfi A
+    
+    title:
+      Oral Administration of Mice with Chimeric Protein Containing Urease Omp31 and Omp19 Induces High Protection against Brucella melitensis and Brucella abortus Infections
+    
+    footnote:
+      14th international congress of immunology & allergy
+      2018
+    
+    in: [Iran, Tehran]
+
+Posters:
+  - authors:
+    - Abkar M
+    - Sanjarian F
+    
+    title:
+      In silico analysis of yeast acetyl transferase (AYT1)
+    
+    footnote:
       The 4th Iranian conference on Bioinformatics
-      Poster
       2012
-      Tehran
+
+    in: [Iran, Tehran]
+  
+  - authors:
+    - Abkar M
+    - Sahebghadam Lotfi A 
+    - Amani J
     
-    - authors:
-      - Abkar M
-      - Sahebghadam Lotfi A 
-      - Amani J
-      
-      title:
-        Cloning expression purification and in silico analysis of the Brucella Urease
-      
+    title:
+      Cloning expression purification and in silico analysis of the Brucella Urease
+    
+    footnote:
       3rd international student biotechnology congress
       2013
-      Tehran
-      Iran
     
-    - authors:
-      - Taghipour Kamalabad S
-      - Zamanzadeh Z
-      - Rezaei H
-      - Tabatabaeian M
-      - Abkar M
-      
-      title:
-        Association between DROSHA rs642321 Polymorphism and Breast Cancer in Iranian Women
+    in: [Iran, Tehran]
+  
+  - authors:
+    - Taghipour Kamalabad S
+    - Zamanzadeh Z
+    - Rezaei H
+    - Tabatabaeian M
+    - Abkar M
+    
+    title:
+      Association between DROSHA rs642321 Polymorphism and Breast Cancer in Iranian Women
 
+    footnote:
       International conference on human genetics and genomics
-      Yazd
-      December 2021
     
-    - authors:
-      - Taghipour Kamalabad S
-      - Zamanzadeh Z
-      - Rezaei H
-      - Tabatabaeian M
-      - Abkar M
-      
-      title:
-        rs10719T>C polymorphism in DROSHA gene may destroy binding site of has-miR-664a-3p and has-miR-1298-5p.
-      
-      International conference on human genetics and genomics
-      Yazd
-      December 2021
+    in: [Iran, Yazd]
+    December 2021
   
-    - authors:
-      - Owji F
-      - Jamali S
-      - Akbar M
-      
-      title:
-        In silico polyepitope vaccine design against SARS-COV-2 infection
-        
-      International conference on human genetics and genomics
-      Yazd
-      December 2021
+  - authors:
+    - Taghipour Kamalabad S
+    - Zamanzadeh Z
+    - Rezaei H
+    - Tabatabaeian M
+    - Abkar M
     
-    - authors:
-      - Jamali S
-      - Owji F
-      - Abkar M
-      
-      title:
-        Design of a Common Vaccine against Influenza and SARS-COV-2 Viruses by Using In Silico Tools
-      
+    title:
+      rs10719T>C polymorphism in DROSHA gene may destroy binding site of has-miR-664a-3p and has-miR-1298-5p.
+    
+    footnote:
       International conference on human genetics and genomics
-      Yazd
-      December 2021
+    
+    in: [Iran, Yazd]
+    December 2021
+
+  - authors:
+    - Owji F
+    - Jamali S
+    - Akbar M
+    
+    title:
+      In silico polyepitope vaccine design against SARS-COV-2 infection
+
+    footnote:  
+      International conference on human genetics and genomics
+    
+    in: [Iran, Yazd]
+    December 2021
   
-    - authors:
-      - Shelerangkon M
-      - Khodabakhsh M
-      - Moein B
-      - Nasri E
-      - Abkar M
-      - Fakhim H
-      
-      title:
-        Co-infection of Gardnella vaginalis and human papillomavirus in cervical samples: A multicenter study in Iran
-  
+  - authors:
+    - Jamali S
+    - Owji F
+    - Abkar M
+    
+    title:
+      Design of a Common Vaccine against Influenza and SARS-COV-2 Viruses by Using In Silico Tools
+    
+    footnote:
+      International conference on human genetics and genomics
+    
+    in: [Iran, Yazd]
+    December 2021
+
+  - authors:
+    - Shelerangkon M
+    - Khodabakhsh M
+    - Moein B
+    - Nasri E
+    - Abkar M
+    - Fakhim H
+    
+    title: |
+      Co-infection of Gardnella vaginalis and human papillomavirus in cervical samples: A multicenter study in Iran
+
+    footnote:
       Iran 22nd international virtual congress of microbiology
-      Tehran
-      September 2021
-  
-    - authors:
-      - Khodabakhsh M
-      - Shelerangkon M
-      - Moein B
-      - Nasri E
-      - Abkar M
-      - Fakhim H
-      
-      title:
-        Molecular characterization of airway yeast colonization in tracheal aspirates of patients with SARS-CoV2 infection 
     
-      admitted to the intensive care unit in Isfahan Iran
-      Tehran
-      September 2021
+    in: [Iran, Tehran]
+    
+    September 2021
 
-Patents:
+  - authors:
+    - Khodabakhsh M
+    - Shelerangkon M
+    - Moein B
+    - Nasri E
+    - Abkar M
+    - Fakhim H
+    
+    title:
+      Molecular characterization of airway yeast colonization in tracheal aspirates of patients with SARS-CoV2 infection 
+  
+    footnote:
+      admitted to the intensive care unit in Isfahan Iran
+    
+    in: [Iran, Tehran]
+    September 2021
+
+patents:
   - center: Iran Patent Center
     id: 87917
   
   - center: Iran Patent Center
     id: 99547
 
-Teaching Experience:
-  University Courses: 
+teaching_experience:
+  university_courses: 
     - Basic Genetics
     - Molecular Genetics
     - Immunology
     - Topics in Genetics 
     - Genetic Engineering
   
-  Teaching Workshops: 
+  workshops: 
     - Bioinformatics
     - Genome and Protein Database Introducing and Primer Design
     - Real-time PCR
@@ -493,7 +545,7 @@ Teaching Experience:
     - Principles of DNA Isolation from plants, Animals and Prokaryotic Cells
     - Vaccine Design
 
-Skills:
+skills:
   - Design of blood DNA extraction kit
   - Primer design
   - PCR Types such as RT-PCR, Real-time PCR, Soeing PCR, PCR-RFLP, …
@@ -503,12 +555,13 @@ Skills:
   - ELISA
   - MTT assay
 
-Reference:
-  Prof. Abbas Sahebghadam Lotfi
-  lotfi_ab@modares.ac.ir
+reference:
+  name: Prof. Abbas Sahebghadam Lotfi
+  email: lotfi_ab@modares.ac.ir
+  sub: 
+    - Department of Clinical Biochemistry
+    - Faculty of Medicine
+    - Tarbiat Modares University
   
-  Department of Clinical Biochemistry
-  Faculty of Medicine, 
-  Tarbiat Modares University, 
-  P.O. Box: 14155-6343
-  Tehran, Iran
+  pobox: 14155-6343
+  location: [Iran, Tehran]
