@@ -18,15 +18,21 @@ type
   CV* = object
     personal_information*: PV
     education*: seq[Education]
-    # professional_experiences*: seq[ProfessionalXP]
-    # research_interests*: seq[string]
-    # publications*: seq[string]
-    # talks*: seq[Talk]
-    # posters*: seq[Poster]
-    # patents*: seq[Patent]
-    # teaching_experience*: TeachingXP
-    # skills*: seq[string]
-    # reference*: Address
+    professional_experiences*: seq[ProfessionalXP]
+    research_interests*: seq[string]
+    publications*: seq[Publication]
+    talks*: seq[Talk]
+    posters*: seq[Poster]
+    patents*: seq[Patent]
+    teaching_experience*: TeachingXP
+    skills*: seq[string]
+    reference*: Address
+
+  Publication* = object
+    authors*: seq[string]
+    title*, footnote*: string 
+    date*: string
+    tags* {.defaultVal: @[].}: seq[string]
 
   Talk* = object
     lecturers*: seq[string]
@@ -40,12 +46,16 @@ type
 
   Address* {.sparse.} = object
     name*: string
-    sub*: Option[seq[string]]
+    sub* {.defaultVal: @[].}: seq[string]
     location*: Option[LocationArray]
-    pobox*, tel*, fax*, email*: Option[string]
+    pobox*: Option[string]
+    tel*: Option[string]
+    fax*: Option[string]
+    email*: Option[string]
 
-  ProfessionalXP* = object
+  ProfessionalXP* {.sparse.} = object
     title*: string
+    thesis*: Option[string]
     span*: TimeSpanArray
     `in`*: Address
   
@@ -86,7 +96,7 @@ type
     country, city
 
 
-  TimeSpanArray* = array[SpanPart, int]
+  TimeSpanArray* = array[SpanPart, string]
   DateArray* = array[DateUnit, int]
   LocationArray* = array[CivilUnit, string]
 
