@@ -20,29 +20,17 @@ type
     education*: seq[Education]
     professional_experiences*: seq[ProfessionalXP]
     research_interests*: seq[string]
-    publications*: seq[Publication]
-    talks*: seq[Talk]
-    posters*: seq[Poster]
+    publications*, talks*, posters*: seq[Activity]
     patents*: seq[Patent]
     teaching_experience*: TeachingXP
     skills*: seq[string]
     reference*: Address
 
-  Publication* = object
-    authors*: seq[string]
-    title*, footnote*: string 
-    date*: string
+  Activity* {.sparse.} = object
+    people*: seq[string]
+    title*, footnote*: string
     tags* {.defaultVal: @[].}: seq[string]
-
-  Talk* = object
-    lecturers*: seq[string]
-    title*, footnote*, date*: string
-    location*: LocationArray
-
-  Poster* = object
-    authors*: seq[string]
-    title*, footnote*, date*: string
-    location*: LocationArray
+    location*: Option[LocationArray]
 
   Address* {.sparse.} = object
     name*: string
@@ -58,7 +46,7 @@ type
     thesis*: Option[string]
     span*: TimeSpanArray
     `in`*: Address
-  
+
   Education* {.sparse.} = object
     degree*: string
     field*: string
@@ -110,7 +98,7 @@ type
     university_courses*, workshops*: seq[string]
 
 
-func toPath*(n: Name): string = 
+func toPath*(n: Name): string =
   (n.first & n.last)
   .toLowerAscii
   .replace(" ", "")

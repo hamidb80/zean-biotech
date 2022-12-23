@@ -368,17 +368,27 @@ func patentC(p: Patent): VNode =
     bold:
       text $p.id
 
-func pubC(p: Publication): VNode =
-  buildHtml tdiv:
-    discard
 
-func talkC(t: Talk): VNode =
-  buildHtml tdiv:
-    discard
+func `$`(l: LocationArray): string = 
+  l[city] & ", " & l[country]
 
-func posterC(p: Poster): VNode =
-  buildHtml tdiv:
-    discard
+func activityC(ac: Activity, you: seq[string]): VNode =
+  buildHtml tdiv(class = "pub"):
+    p(class = "title"):
+      bold: text ac.title
+      text " - "
+      italic: text ac.footnote
+
+    p:
+      for p in ac.people:
+        let c = 
+          if p in you: " me"
+          else: ""
+
+        tdiv(class = "author " & c):
+          p:
+            text p
+
 
 
 func cvPage*(cv: CV): VNode =
@@ -388,6 +398,11 @@ func cvPage*(cv: CV): VNode =
     name =
       pfp.name.first & " " &
       pfp.name.last
+
+    you = @[
+      capitalizeAscii name,
+      capitalizeAscii pfp.name.last & " " & pfp.name.first[0]
+    ]
 
     pageTitle = name & " CV"
 
@@ -471,17 +486,17 @@ func cvPage*(cv: CV): VNode =
           h2: text "Publications"
           tdiv(class = "content"):
             for p in cv.publications:
-              pubC p
+              activityC(p, you)
 
           h2: text "Talks"
           tdiv(class = "content"):
             for t in cv.talks:
-              talkC t
+              activityC(t, you)
 
           h2: text "Posters"
           tdiv(class = "content"):
             for p in cv.posters:
-              posterC p
+              activityC(p, you)
 
           h2: text "Patents"
           tdiv(class = " content"):
