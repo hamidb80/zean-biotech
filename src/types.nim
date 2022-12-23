@@ -25,18 +25,30 @@ type
     patents: seq[Patent] 
     teaching_experience: TeachingXP
     skills: seq[string]
-    reference: Reference
+    reference: Address
 
-  Reference = object
+  Address = object
+    name: string
+    sub: Option[seq[string]]
+    location: Option[LocationArray]
+    pobox: Option[int]
+    tel, fax: Option[string]
+    email: Option[string]
+
+
+  ProfessionalXP = object
+    title: string
+    span: TimeSpanArray
+    `in`: Address
 
   Span = enum
     start, stop
 
-  TimeSpanArray = array[Span, int]
+  TimeSpanArray = array[Span, string]
 
   Education = object
     degree: string
-    `of`: string
+    field: string
     span: TimeSpanArray
     `in`: string
     thesis: Option[string]
@@ -48,8 +60,7 @@ type
     single, married
 
   Contact = object
-    phone: int
-    email, linkedin: string
+    phone, email, linkedin: string
 
   PV = object
     name: Name

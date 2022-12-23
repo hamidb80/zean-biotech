@@ -11,31 +11,31 @@ personal_information:
   family_status: married
 
   contact:
-    phone: +989362045641
+    phone: '+989362045641'
     email: mortezaabkar@gmail.com
     linkedin: https://www.linkedin.com/in/morteza-abkar-5444b747/
 
 education:
   - degree: Ph.D.
-    of: Molecular Genetics
-    span: [2010, 2015]
+    field: Molecular Genetics
+    span: ['2010', '2015']
     in: University of Tarbiat Modares
     Thesis: Design and Production of Chimeric Protein Containing Omp19, Omp31 and Urease against Brucella and Evaluation of its Immunogenicity
     
   - degree: MSC
-    of: Cellular and Molecular Biology
-    span: [2007, 2010]
+    field: Cellular and Molecular Biology
+    span: ['2007', '2010']
     in: Common Student Shahid Madani University of Azarbaijan & National Institute of Genetic Engineering
     Thesis: Functional Analysis of Mutated Ribosomal Protein L3 (RPL3 W258C/H259Y) in Yeast towards Conferring Resistance to Mycotoxin Deoxynivalenol
     
   - degree: BSC
-    of: Cellular and Molecular Biology Genetics
-    span: [2002, 2006]
+    field: Cellular and Molecular Biology Genetics
+    span: ['2002', '2006']
     in: University of Esfahan
 
 professional_experiences:
   - title: Assistant Professor in Genetics Department
-    span: [2020, -1] # -1 means now
+    span: ['2020', now]
     in: 
       name: Shahid Ashrafi Esfahani University
       sub: 
@@ -50,7 +50,7 @@ professional_experiences:
 
   - title: Postdoc researcher
     span: [June 2017, June 2018]
-    thesis: Production of chitosan based nanovaccine containing Brucella melitensis Omp31 and investigation of its immunogenicity in mouse model.
+    thesis: Production of chitosan based nanovaccine containing Brucella melitensis Omp31 and investigation of its immunogenicity in mouse model
     in: 
       name: Shiraz University of medical sciences 
 
@@ -70,10 +70,10 @@ publications:
     - Mehdi Kamali
     
     title: 
-      Design of a chimeric DNA Vaccine against Brucella spp. 
+      Design of a chimeric DNA Vaccine against Brucella spp 
     
     footnote: 
-      Minerva Biotecnologica 2014; 26:223-233. 
+      Minerva Biotecnologica 2014; 26:223-233 
 
   - authors:
     - Morteza Abkar
@@ -81,13 +81,13 @@ publications:
     - Abbas Sahebghadam Lotfi
     - Gholamreza Nikbakht Brujeni
     - Saeed Alamian
-    - Mehdi Kamali. 
+    - Mehdi Kamali 
 
     title: 
-      Subcutaneous immunization with a novel immunogenic candidate (urease) confers protection against Brucella abortus and Brucella melitensis infections. 
+      Subcutaneous immunization with a novel immunogenic candidate (urease) confers protection against Brucella abortus and Brucella melitensis infections 
 
     footnote: |
-      APMIS 2015 Aug; 123(8): 667-675. 
+      APMIS 2015 Aug; 123(8): 667-675 
 
   - authors:
     - Morteza Abkar
@@ -102,10 +102,10 @@ publications:
     - Hamid Koushki
 
     title: |
-      Survey of Omp19 immunogenicity against Brucella abortus and Brucella melitensis: Influence of nanoparticulation and route of administration versus traditional immunization. 
+      Survey of Omp19 immunogenicity against Brucella abortus and Brucella melitensis: Influence of nanoparticulation and route of administration versus traditional immunization 
 
     footnote:
-      Vet Res Comm. 2015 Dec; 39(4):217-28. 
+      Vet Res Comm. 2015 Dec; 39(4):217-28 
 
   - authors:
     - Ahmad Poursadegh Zonouzi
@@ -115,17 +115,17 @@ publications:
     - Ali Azadi
 
     title:
-      Mitochondrial Complex I Gene Variations; as a Potential Genetic Risk Factor in Pathogenesis of Multiple Sclerosis. 
+      Mitochondrial Complex I Gene Variations; as a Potential Genetic Risk Factor in Pathogenesis of Multiple Sclerosis 
 
     footnote:
-      J Neurol Sci 345. 2014. 220-223. 
+      J Neurol Sci 345. 2014. 220-223 
 
   - authors:
     - Saeid Ghorbian
     - Morteza Abkar
     - Ahmad Poursadegh Zonouzi
     
-    Methodology to Understand How Perforin Assembles on Membranes. Scandinavian journal of immunology. 80. 2014. 73-74. 
+    Methodology to Understand How Perforin Assembles on Membranes. Scandinavian journal of immunology. 80. 2014. 73-74 
 
   - authors:
     - Morteza Abkar
@@ -133,10 +133,10 @@ publications:
     - M. Mousavi
     
     title:
-      Asses ability of mutant variety of ribosomal protein L3 (RPL3 W258C/H259Y) in resistance to mycotoxin of Fusarium graminearum by using Saccharomyces cervisiae. 
+      Asses ability of mutant variety of ribosomal protein L3 (RPL3 W258C/H259Y) in resistance to mycotoxin of Fusarium graminearum by using Saccharomyces cervisiae 
 
     footnote:
-      Crop Biotech. Persian. 13-23. 
+      Crop Biotech. Persian. 13-23 
 
   - authors:
     - Bandani E
@@ -152,10 +152,10 @@ publications:
     - Abkar M
     
     title: |
-      Recombinant plasmid KMP-11 gene Leishmania major (pcKMP-11): production characterization and sequencing. 
+      Recombinant plasmid KMP-11 gene Leishmania major (pcKMP-11): production characterization and sequencing 
 
     footnote:
-      Minerva Biotecnologica 2014; September; 26 (3):175-182. 
+      Minerva Biotecnologica 2014; September; 26 (3):175-182 
 
   - authors:
     - Ali Akbar Poursadegh Zonouzi
@@ -163,10 +163,10 @@ publications:
     - Morteza Abkar
     
     title:
-      Recent Applications of DNA Vaccines in Cancer Therapy. 
+      Recent Applications of DNA Vaccines in Cancer Therapy 
 
     footnote:
-      Molecular medicine journal. 2016. Vol 1 Num 3. 
+      Molecular medicine journal. 2016. Vol 1 Num 3 
 
   - authors:
     - Morteza Abkar
@@ -175,10 +175,10 @@ publications:
     - Mehdi Fasihi Ramandi
     
     title:
-      Optimization of a method for refolding of bacterial recombinant proteins. 
+      Optimization of a method for refolding of bacterial recombinant proteins 
 
     footnote:
-      Molecular and biochemical diagnosis journal. Vol.2 No.1 (2016) 65-78.
+      Molecular and biochemical diagnosis journal. Vol.2 No.1 (2016) 65-78
 
   - authors:
     - Salman Bagheri
@@ -191,22 +191,22 @@ publications:
     - Hamid Kooshki
     
     title:
-      Using gold nanoparticles in diagnosis and treatment of melanoma cancer. 
+      Using gold nanoparticles in diagnosis and treatment of melanoma cancer 
 
     footnote:
-      Artificial Cells Nanomedicine and Biotechnology 2018.
+      Artificial Cells Nanomedicine and Biotechnology 2018
 
   - authors:
     - Morteza Abkar
     - Mahdi Fasihi Ramandi
     - Hamid Kooshki
-    - Abbas Sahebghadam Lotfi. 
+    - Abbas Sahebghadam Lotfi 
     
     title:
-      Oral immunization of mice with Omp31 loaded N-trimethyl Chitosan nanoparticles induces high protection against B. melitensis infection. 
+      Oral immunization of mice with Omp31 loaded N-trimethyl Chitosan nanoparticles induces high protection against B. melitensis infection 
 
     footnote:
-      International journal of nanomedicine. 2017:12 8769–8778.
+      International journal of nanomedicine. 2017:12 8769–8778
 
   - authors:
     - Morteza Abkar
@@ -215,10 +215,10 @@ publications:
     - Abbas Sahebghadam Lotfi
 
     title: 
-      Intraperitoneal immunization with Urease loaded N-trimethyl Chitosan nanoparticles elicits high protection against B. melitensis and B. abortus infections. 
+      Intraperitoneal immunization with Urease loaded N-trimethyl Chitosan nanoparticles elicits high protection against B. melitensis and B. abortus infections 
 
     footnote:
-      Immunology Letters. 199 (2018) 53–60.
+      Immunology Letters. 199 (2018) 53–60
 
   - authors:
     - Reza Heidari
@@ -226,12 +226,12 @@ publications:
     - Morteza Abkar
     
     title: |
-      CdS nanocrystals/graphene oxide-AuNPs based electrochemiluminescence immunosensor in sensitive quantification of a cancer biomarker: p53. 
+      CdS nanocrystals/graphene oxide-AuNPs based electrochemiluminescence immunosensor in sensitive quantification of a cancer biomarker: p53 
 
     footnote:
       Biosensors and Bioelectronics. Volume 126
       1 February 2019
-      Pages 7-14.
+      Pages 7-14
 
   - authors:
     - Roksana Sookhaklari
@@ -240,10 +240,10 @@ publications:
     - Maryam Moosavi
     
     title:
-      The neuroprotective effect of BSA-based nanocurcumin against 6-OHDA-induced cell death in SH-SY5Y cells. 
+      The neuroprotective effect of BSA-based nanocurcumin against 6-OHDA-induced cell death in SH-SY5Y cells 
 
     footnote:
-      Avicenna Journal of Phytomedicine. 2018. In press.
+      Avicenna Journal of Phytomedicine. 2018. In press
 
   - authors:
     - Maryam Moosavi
@@ -253,10 +253,10 @@ publications:
     - Morteza Abkar
 
     title:
-      Curcumin Loaded BSA Nanoparticles Protects More Efficiently Than Natural Curcumin Against Scopolamine-Induced Memory Retrieval Deficit. 
+      Curcumin Loaded BSA Nanoparticles Protects More Efficiently Than Natural Curcumin Against Scopolamine-Induced Memory Retrieval Deficit 
 
     footnote:
-      Basic and Clinical Neuroscience. 2018.
+      Basic and Clinical Neuroscience. 2018
 
   - authors:
     - Morteza Abkar
@@ -264,12 +264,12 @@ publications:
     - Naghmeh Sattarahmady
     
     title:
-      A comparison between adjuvant and delivering functions of calcium phosphate aluminum hydroxide and chitosan nanoparticles using a model protein of brucella melitensis Omp31. 
+      A comparison between adjuvant and delivering functions of calcium phosphate aluminum hydroxide and chitosan nanoparticles using a model protein of brucella melitensis Omp31 
 
     footnote:
       Immunology Letters. Volume 207
       May 2019
-      Pages 28-35.
+      Pages 28-35
 
   - authors:
     - Mahshid Samie Ghahfarokhi
@@ -277,13 +277,16 @@ publications:
     - Zahra Zamanzadeh
     - Morteza Abkar
 
-    year: 2022
+    date: '2022'
 
     title:    
-      Association of hsa-miR5571-5p expression with clinicopathological factors and identification of its hub target genes and key pathway in breast cancer. 
+      Association of hsa-miR5571-5p expression with clinicopathological factors and identification of its hub target genes and key pathway in breast cancer 
 
     footnote:
-      Iranian Journal of Public Health. [Under print]
+      Iranian Journal of Public Health
+
+    tags:
+      - Under print
     
 Talks:
   - lecturers:
@@ -297,12 +300,12 @@ Talks:
     - Kamali M
 
     title:
-      Brucella abortus Outer Membrane Protein 19 Loaded N-trimethyl Chitosan Confers Protection against B. abortus B. melitensis and B. suis in Mice. 
+      Brucella abortus Outer Membrane Protein 19 Loaded N-trimethyl Chitosan Confers Protection against B. abortus B. melitensis and B. suis in Mice 
 
     footnote:
-      12th international congress of immunology & allergy.
+      12th international congress of immunology & allergy
     
-    year: 2014
+    date: '2014'
     in: [Iran, Tehran]
   
   - lecturers:
@@ -318,9 +321,10 @@ Talks:
     title:
       The Oral Chimeric Vaccine Candidate Omp19-Omp31 Induces Protection against Different Brucella spp Challenges by Inducing IL-17 Immune Response
     
-    12th international congress of immunology & allergy
-    2014
-
+    footnote:
+      12th international congress of immunology & allergy
+    
+    date: '2014'
     in: [Iran, Tehran]
     
   - lecturers:
@@ -334,8 +338,8 @@ Talks:
     
     footnote:
       13th international congress of immunology & allergy
-      2016
-    
+
+    date: '2016'
     in: [Iran, Tabriz]
   
   - lecturers:
@@ -346,11 +350,12 @@ Talks:
     - Sahebghadam Lotfi A
 
     title: 
-      Examination of Urease immunogenicity against Brucella abortus and Brucella melitensis: influence of nanoparticulation versus traditional immunization. 
+      Examination of Urease immunogenicity against Brucella abortus and Brucella melitensis: influence of nanoparticulation versus traditional immunization 
     
-    13th international congress of immunology & allergy
-    2016
-    
+    footnote:
+      13th international congress of immunology & allergy
+
+    date: '2016'
     in: [Iran, Tabriz]
 
   - lecturers:
@@ -359,12 +364,12 @@ Talks:
     - Sattarahmady N
     
     title: 
-      Gelatin nanoparticle based delivery of Urease and Omp31 in mice protects against Brucella melitensis 16M infection. 
+      Gelatin nanoparticle based delivery of Urease and Omp31 in mice protects against Brucella melitensis 16M infection 
     
     footnote:
       14th international congress of immunology & allergy
-      2018
-    
+
+    date: '2018'
     in: [Iran, Tehran]
 
   - lecturers:
@@ -373,12 +378,12 @@ Talks:
     - Sattarahmady N
     
     title: 
-      Subcutaneous vaccination with aluminium hydroxide/Omp31 and chitosan/Omp31 nanoparticles induces protection against Brucella melitensis infection in BALB/c mice. 
+      Subcutaneous vaccination with aluminium hydroxide/Omp31 and chitosan/Omp31 nanoparticles induces protection against Brucella melitensis infection in BALB/c mice 
     
     footnote:
       14th international congress of immunology & allergy
-      2018
-    
+
+    date: '2018'
     in: [Iran, Tehran]
 
   - lecturers:
@@ -392,8 +397,8 @@ Talks:
     
     footnote:
       14th international congress of immunology & allergy
-      2018
-    
+
+    date: '2018'
     in: [Iran, Tehran]
 
 Posters:
@@ -406,8 +411,8 @@ Posters:
     
     footnote:
       The 4th Iranian conference on Bioinformatics
-      2012
-
+    
+    date: '2012'
     in: [Iran, Tehran]
   
   - authors:
@@ -420,8 +425,8 @@ Posters:
     
     footnote:
       3rd international student biotechnology congress
-      2013
-    
+
+    date: '2013'
     in: [Iran, Tehran]
   
   - authors:
@@ -438,7 +443,7 @@ Posters:
       International conference on human genetics and genomics
     
     in: [Iran, Yazd]
-    December 2021
+    date: December 2021
   
   - authors:
     - Taghipour Kamalabad S
@@ -448,13 +453,13 @@ Posters:
     - Abkar M
     
     title:
-      rs10719T>C polymorphism in DROSHA gene may destroy binding site of has-miR-664a-3p and has-miR-1298-5p.
+      rs10719T>C polymorphism in DROSHA gene may destroy binding site of has-miR-664a-3p and has-miR-1298-5p
     
     footnote:
       International conference on human genetics and genomics
     
     in: [Iran, Yazd]
-    December 2021
+    date: December 2021
 
   - authors:
     - Owji F
@@ -468,7 +473,7 @@ Posters:
       International conference on human genetics and genomics
     
     in: [Iran, Yazd]
-    December 2021
+    date: December 2021
   
   - authors:
     - Jamali S
@@ -482,7 +487,7 @@ Posters:
       International conference on human genetics and genomics
     
     in: [Iran, Yazd]
-    December 2021
+    date: December 2021
 
   - authors:
     - Shelerangkon M
@@ -499,8 +504,7 @@ Posters:
       Iran 22nd international virtual congress of microbiology
     
     in: [Iran, Tehran]
-    
-    September 2021
+    date: September 2021
 
   - authors:
     - Khodabakhsh M
@@ -517,7 +521,7 @@ Posters:
       admitted to the intensive care unit in Isfahan Iran
     
     in: [Iran, Tehran]
-    September 2021
+    date: September 2021
 
 patents:
   - center: Iran Patent Center
