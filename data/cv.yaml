@@ -75,6 +75,8 @@ publications:
     footnote: 
       Minerva Biotecnologica 2014; 26:223-233 
 
+    date: '2014'
+
   - authors:
     - Morteza Abkar
     - Jafar Amani
@@ -88,6 +90,8 @@ publications:
 
     footnote: |
       APMIS 2015 Aug; 123(8): 667-675 
+
+    date: Aug 2015
 
   - authors:
     - Morteza Abkar
@@ -107,6 +111,8 @@ publications:
     footnote:
       Vet Res Comm. 2015 Dec; 39(4):217-28 
 
+    date: Dec 2015
+
   - authors:
     - Ahmad Poursadegh Zonouzi
     - Saeid Ghorbian
@@ -125,7 +131,13 @@ publications:
     - Morteza Abkar
     - Ahmad Poursadegh Zonouzi
     
-    Methodology to Understand How Perforin Assembles on Membranes. Scandinavian journal of immunology. 80. 2014. 73-74 
+    title:
+      Methodology to Understand How Perforin Assembles on Membranes. Scandinavian journal of immunology
+      
+    footnote:
+      80. 2014. pages 73-74 
+
+    date: '2014'
 
   - authors:
     - Morteza Abkar
@@ -157,6 +169,8 @@ publications:
     footnote:
       Minerva Biotecnologica 2014; September; 26 (3):175-182 
 
+    date: September 2014
+
   - authors:
     - Ali Akbar Poursadegh Zonouzi
     - Ahmad Poursadegh Zonouzi
@@ -167,6 +181,8 @@ publications:
 
     footnote:
       Molecular medicine journal. 2016. Vol 1 Num 3 
+
+    date: '2016'
 
   - authors:
     - Morteza Abkar
@@ -179,6 +195,8 @@ publications:
 
     footnote:
       Molecular and biochemical diagnosis journal. Vol.2 No.1 (2016) 65-78
+
+    date: '2016'
 
   - authors:
     - Salman Bagheri
@@ -194,7 +212,9 @@ publications:
       Using gold nanoparticles in diagnosis and treatment of melanoma cancer 
 
     footnote:
-      Artificial Cells Nanomedicine and Biotechnology 2018
+      Artificial Cells Nanomedicine and Biotechnology
+
+    date: '2018'
 
   - authors:
     - Morteza Abkar
@@ -208,6 +228,8 @@ publications:
     footnote:
       International journal of nanomedicine. 2017:12 8769–8778
 
+    date: '2017'
+
   - authors:
     - Morteza Abkar
     - Mahdi Fasihi Ramandi
@@ -220,6 +242,8 @@ publications:
     footnote:
       Immunology Letters. 199 (2018) 53–60
 
+    date: '2018'
+
   - authors:
     - Reza Heidari
     - Jamal Rashidiani
@@ -229,9 +253,9 @@ publications:
       CdS nanocrystals/graphene oxide-AuNPs based electrochemiluminescence immunosensor in sensitive quantification of a cancer biomarker: p53 
 
     footnote:
-      Biosensors and Bioelectronics. Volume 126
-      1 February 2019
-      Pages 7-14
+      Biosensors and Bioelectronics. Volume 126. Pages 7-14
+    
+    date: 1 February 2019
 
   - authors:
     - Roksana Sookhaklari
@@ -240,10 +264,13 @@ publications:
     - Maryam Moosavi
     
     title:
-      The neuroprotective effect of BSA-based nanocurcumin against 6-OHDA-induced cell death in SH-SY5Y cells 
+      The neuroprotective effect of BSA-based nanocurcumin against 6-OHDA-induced cell death in SH-SY5Y cells
 
     footnote:
-      Avicenna Journal of Phytomedicine. 2018. In press
+      Avicenna Journal of Phytomedicine
+    
+    date: '2018'
+    tags: [In press]
 
   - authors:
     - Maryam Moosavi
@@ -256,7 +283,9 @@ publications:
       Curcumin Loaded BSA Nanoparticles Protects More Efficiently Than Natural Curcumin Against Scopolamine-Induced Memory Retrieval Deficit 
 
     footnote:
-      Basic and Clinical Neuroscience. 2018
+      Basic and Clinical Neuroscience
+      
+    date: '2018'
 
   - authors:
     - Morteza Abkar
@@ -267,9 +296,9 @@ publications:
       A comparison between adjuvant and delivering functions of calcium phosphate aluminum hydroxide and chitosan nanoparticles using a model protein of brucella melitensis Omp31 
 
     footnote:
-      Immunology Letters. Volume 207
-      May 2019
-      Pages 28-35
+      Immunology Letters. Volume 207. Pages 28-35
+
+    date: May 2019
 
   - authors:
     - Mahshid Samie Ghahfarokhi
@@ -285,8 +314,7 @@ publications:
     footnote:
       Iranian Journal of Public Health
 
-    tags:
-      - Under print
+    tags: [Under print]
     
 Talks:
   - lecturers:
@@ -306,7 +334,7 @@ Talks:
       12th international congress of immunology & allergy
     
     date: '2014'
-    in: [Iran, Tehran]
+    location: [Iran, Tehran]
   
   - lecturers:
     - Abkar M
@@ -325,7 +353,7 @@ Talks:
       12th international congress of immunology & allergy
     
     date: '2014'
-    in: [Iran, Tehran]
+    location: [Iran, Tehran]
     
   - lecturers:
     - Abkar M
@@ -340,7 +368,7 @@ Talks:
       13th international congress of immunology & allergy
 
     date: '2016'
-    in: [Iran, Tabriz]
+    location: [Iran, Tabriz]
   
   - lecturers:
     - Abkar M
@@ -356,7 +384,7 @@ Talks:
       13th international congress of immunology & allergy
 
     date: '2016'
-    in: [Iran, Tabriz]
+    location: [Iran, Tabriz]
 
   - lecturers:
     - Abkar M
@@ -370,7 +398,7 @@ Talks:
       14th international congress of immunology & allergy
 
     date: '2018'
-    in: [Iran, Tehran]
+    location: [Iran, Tehran]
 
   - lecturers:
     - Abkar M
@@ -384,7 +412,7 @@ Talks:
       14th international congress of immunology & allergy
 
     date: '2018'
-    in: [Iran, Tehran]
+    location: [Iran, Tehran]
 
   - lecturers:
     - Abkar M
@@ -399,7 +427,7 @@ Talks:
       14th international congress of immunology & allergy
 
     date: '2018'
-    in: [Iran, Tehran]
+    location: [Iran, Tehran]
 
 Posters:
   - authors:
@@ -413,7 +441,7 @@ Posters:
       The 4th Iranian conference on Bioinformatics
     
     date: '2012'
-    in: [Iran, Tehran]
+    location: [Iran, Tehran]
   
   - authors:
     - Abkar M
@@ -427,7 +455,7 @@ Posters:
       3rd international student biotechnology congress
 
     date: '2013'
-    in: [Iran, Tehran]
+    location: [Iran, Tehran]
   
   - authors:
     - Taghipour Kamalabad S
@@ -442,7 +470,7 @@ Posters:
     footnote:
       International conference on human genetics and genomics
     
-    in: [Iran, Yazd]
+    location: [Iran, Yazd]
     date: December 2021
   
   - authors:
@@ -458,7 +486,7 @@ Posters:
     footnote:
       International conference on human genetics and genomics
     
-    in: [Iran, Yazd]
+    location: [Iran, Yazd]
     date: December 2021
 
   - authors:
@@ -472,7 +500,7 @@ Posters:
     footnote:  
       International conference on human genetics and genomics
     
-    in: [Iran, Yazd]
+    location: [Iran, Yazd]
     date: December 2021
   
   - authors:
@@ -486,7 +514,7 @@ Posters:
     footnote:
       International conference on human genetics and genomics
     
-    in: [Iran, Yazd]
+    location: [Iran, Yazd]
     date: December 2021
 
   - authors:
@@ -503,7 +531,7 @@ Posters:
     footnote:
       Iran 22nd international virtual congress of microbiology
     
-    in: [Iran, Tehran]
+    location: [Iran, Tehran]
     date: September 2021
 
   - authors:
@@ -520,7 +548,7 @@ Posters:
     footnote:
       admitted to the intensive care unit in Isfahan Iran
     
-    in: [Iran, Tehran]
+    location: [Iran, Tehran]
     date: September 2021
 
 patents:

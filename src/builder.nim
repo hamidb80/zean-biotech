@@ -29,3 +29,10 @@ when isMainModule:
   writeFile dest/"contact-us.html", $contactUsP()
   writeFile dest/"products.html", $productsP(site.products)
   writeFile dest/"services.html", $servicesP(site.services)
+
+  let 
+    cv = loadYaml[CV]("./data/cv.yaml")
+    p = dest/cv.personal_information.name.toPath
+
+  createDir p
+  writeFile p/"index.html", $cvPage(cv)

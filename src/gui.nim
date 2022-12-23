@@ -299,3 +299,8 @@ func servicesP*(services: seq[Article]): VNode =
           articleC s
 
       footerC()
+
+
+func cvPage*(cv: CV): VNode =
+  buildHtml tdiv:
+    discard
