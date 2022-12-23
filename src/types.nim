@@ -76,6 +76,7 @@ type
     phone*, email*, linkedin*: string
 
   PV* = object
+    image*: string
     name*: Name
     born*: Born
     nationality*: string

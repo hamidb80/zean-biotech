@@ -1,4 +1,6 @@
 personal_information:
+  image: /static/pics/pfp.png
+
   name: 
     first: Morteza
     last: Abkar

@@ -321,18 +321,41 @@ func cvPage*(cv: CV): VNode =
     body:
       tdiv(class="cv-wrapper"):
         aside:
-          img
+          cv.img
           name
 
-        tdiv:
-          personal_information
-          education
-          professional_experiences
-          research_interests
-          publications
-          talks
-          posters
-          patents
-          teaching_experience
-          skills
+        main:
+          cv.personal_information
+          
+          for ed in cv.education:
+            ed
+
+          for ex in cv.professional_experiences:
+            ex
+          
+          for ri in cv.research_interests:
+            ri
+
+          for pub in cv.publications:
+            pub
+
+          for tk in cv.talks:
+            tk
+          
+          for p in cv.posters:
+            p
+
+          for p in patents:
+            p
+
+          tdiv:
+            for uc in cv.teaching_experience.university_courses:
+              uc
+
+            for wk in cv.teaching_experience.workshops:
+              wk
+          
+          for sk in cv.skills:
+            sk
+          
           reference
