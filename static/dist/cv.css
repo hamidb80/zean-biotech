@@ -50,6 +50,7 @@ body {
 .cv-wrapper aside {
   background-color: #016d6f;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
