@@ -1,5 +1,5 @@
 import std/[strformat, sequtils, strutils, options]
-import karax/[karaxdsl, vdom], marggers, marggers/element
+import karax/[karaxdsl, vdom], margrave, margrave/element
 import types
 
 # --- basics
@@ -35,7 +35,7 @@ func boldB(items: seq[VNode]): VNode =
     for i in items:
       i
 
-func m2h(elem: MarggersElement): VNode =
+func m2h(elem: MargraveElement): VNode =
   if elem.isText:
     if elem.str.startsWith "------":
       spaceB()
@@ -54,7 +54,8 @@ func m2h(elem: MarggersElement): VNode =
 
 func markdown2html*(s: string): seq[VNode] =
   {.cast(noSideEffect).}:
-    parseMarggers(s).map(m2h)
+    parsemargrave(s).map(m2h)
+    
 
 # --- components
 
