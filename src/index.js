@@ -7,6 +7,10 @@ import path from 'path'
 const edge = Edge.create()
 edge.mount(new URL('../views', import.meta.url))
 
+
+function nothing() { }
+let rec = { recursive: true }
+
 // ---------------------------------
 
 function replaceFileExtension(filePath, newExtension) {
@@ -34,7 +38,7 @@ function getFilesRecursively(directory, extension) {
 }
 
 function writeFileRecursive(filePath, content) {
-  fs.mkdirSync(path.dirname(filePath), { recursive: true })
+  fs.mkdirSync(path.dirname(filePath), rec)
   fs.writeFileSync(filePath, content)
 }
 
@@ -63,8 +67,9 @@ function build() {
     ],
     "email": "info@zeanbiotech.ir"
   })).then(_ => {
-    fs.cp('./static', './out/static', { recursive: true }, () => { })
-    fs.cp('./out/pages', './out', { recursive: true }, () => { fs.rmdir('./out/pages', () => { }) })
+    fs.cp('./static', './out/static', rec, nothing)
+    fs.cp('./out/pages', './out', rec, () => { fs.rmdir('./out/pages', nothing) })
+    fs.copyFileSync('./CNAME', './out/CNAME')
   })
 }
 
