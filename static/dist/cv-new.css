@@ -188,3 +188,7 @@ body {
   color: white;
   font-style: italic;
 }
+
+.cv-wrapper aside a{
+  color: whitesmoke;
+}
