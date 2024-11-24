@@ -1,0 +1,190 @@
+@font-face {
+  font-family: 'samim';
+  src: url('/static/fonts/samim.ttf') format('truetype');
+}
+.fa {
+  font-family: 'samim';
+  direction: rtl;
+}
+.rounded {
+  border-radius: 6px;
+}
+.very-rounded {
+  border-radius: 22px;
+}
+.shadow {
+  box-shadow: 2px 6px 12px 0px #9f9f9f33;
+}
+.transition {
+  transition: 0.3s;
+}
+.space-y {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.check-icon {
+  background: url("/static/pics/icons/check.svg");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Karla';
+}
+.cv-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 880px;
+  margin: 20px 0;
+}
+.cv-wrapper aside,
+.cv-wrapper main {
+  box-shadow: 0 0 10px 0px #61616145;
+  margin: 10px 0;
+}
+.cv-wrapper aside {
+  background-color: #016d6f;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+}
+.cv-wrapper aside .profile {
+  display: flex;
+  flex-direction: column;
+}
+.cv-wrapper aside .profile .pfp {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+.cv-wrapper aside .profile .pfp img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 6px;
+}
+.cv-wrapper aside .profile .info .name {
+  color: white;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.cv-wrapper aside .profile .info .job {
+  text-align: center;
+  color: #eee;
+  margin-bottom: 16px;
+}
+.cv-wrapper aside .body {
+  padding-left: 32px;
+  color: white;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.cv-wrapper aside .body ul {
+  list-style: none;
+}
+.cv-wrapper aside .body li {
+  margin: 2px 0;
+}
+.cv-wrapper .title a {
+  text-decoration: none;
+  color: #016d6f;
+}
+.cv-wrapper .title a:hover {
+  text-decoration: underline;
+}
+.cv-wrapper .icon-wrapper {
+  margin: 0px 2px;
+}
+.cv-wrapper .icon-wrapper .icon {
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.cv-wrapper .icon-wrapper.download {
+  border-color: red;
+  color: red;
+}
+.cv-wrapper .icon-wrapper.download .icon {
+  background-image: url("/static/pics/icons/download.svg");
+}
+.cv-wrapper main {
+  width: auto;
+  padding: 20px 30px;
+  background-color: white;
+}
+.cv-wrapper main h2 {
+  color: #016d6f;
+  margin-top: 40px;
+  margin-bottom: 6px;
+  font-size: 1.7rem;
+}
+.cv-wrapper main h2::before {
+  content: "# ";
+}
+.cv-wrapper main h2:first-child {
+  margin-top: 8px;
+}
+.cv-wrapper main h3 {
+  font-size: 1.4rem;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+.cv-wrapper main hr {
+  margin-top: 20px;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #aaa;
+}
+.cv-wrapper main ul {
+  margin-left: 20px;
+}
+.cv-wrapper main .my1 {
+  margin-top: 10px;
+}
+.cv-wrapper main .content {
+  margin-bottom: 32px;
+  padding: 0 16px;
+}
+.cv-wrapper main .time-span {
+  display: flex;
+  margin-top: -10px;
+  justify-content: center;
+}
+.cv-wrapper main .time-span .line {
+  border-radius: 16px;
+  padding: 2px 10px;
+  margin-bottom: 10px;
+  color: white;
+  background-color: #016d6f;
+}
+.cv-wrapper main .pub {
+  margin-bottom: 22px;
+}
+.cv-wrapper main .pub .title {
+  margin-bottom: 4px;
+}
+.cv-wrapper main .author {
+  display: inline-block;
+  border-radius: 16px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  background-color: #eaeaea;
+}
+.cv-wrapper main .author.me {
+  background-color: #016d6f;
+  color: white;
+  font-style: italic;
+}

@@ -1,7 +1,9 @@
 .fandogh/
+node_modules/
 static/dist/*.css
 output/
 builder
 play.*
 temp.*
 *.exe
+out/
