@@ -70,6 +70,7 @@ function build() {
     fs.cp('./static', './out/static', rec, nothing)
     fs.cp('./out/pages', './out', rec, () => { fs.rmdir('./out/pages', nothing) })
     fs.copyFileSync('./CNAME', './out/CNAME')
+    fs.copyFileSync('./.gitignore', './out/.gitignore')
   })
 }
 
