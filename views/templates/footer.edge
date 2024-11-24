@@ -15,12 +15,20 @@
     <div class="part contact">
       <div class="title">تماس با ما</div>
       <div class="body">
-        <a href="tel:{{com.phones[0]}}"></a>
-        <p>
-          {{com.phones[0]}}
-          شماره همراه و واتساپ شرکت
-        </p>
         <p>ایمیل: <a href="mailto:{{com.email}}">{{com.email}}</a></p>
+        <p>
+          شماره های شرکت:
+          @each( (ph, index) in com.phones)
+          <span>
+            @if(index != 0)
+              و                 
+            @endif
+            <a href="tel:{{ph}}">
+              {{ph}}
+            </a>
+          </span>
+          @endeach
+        </p>
       </div>
     </div>
     <div class="part address">
@@ -32,6 +40,16 @@
           شرکت زیست اکسیر آینده نگر
         </address>
       </div>
+
+      <a href="https://maps.app.goo.gl/xymKK7cSbuhM7nmx9" target="_blank" class="locaiton-map">
+        <img src="/static/pics/map-loc.png" alt="location">
+      </a>
+
+      <p>
+        <center>
+          برای دیدن نقشه روی تصویر بالا کلیک کنید
+        </center>
+      </p>
     </div>
   </footer>
   <div class="after-footer">
